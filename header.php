@@ -58,4 +58,5 @@
 				<?php custom_menu(); ?>
                 </div>
             </div>
+            <?php get_sidebar("events");?>
         </div>

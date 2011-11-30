@@ -178,6 +178,16 @@ add_action('admin_menu', 'themeoptions_admin_menu');
 function twentyeleven_widgets_init() {
 
 	register_sidebar( array(
+		'name' => __( 'Events horizontal', 'twentyeleven' ),
+		'id' => 'events-sidebar',
+		'description' => __( 'Event widget for header', 'twentyeleven' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
 		'name' => __( 'Footer Area One', 'twentyeleven' ),
 		'id' => 'sidebar-3',
 		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
