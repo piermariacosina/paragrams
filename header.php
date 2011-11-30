@@ -33,7 +33,6 @@
 
 </head>
 <body <?php body_class(); ?>>
-<div id="backgr_image"></div>
 	<div id="outer">
 		<div class="logo_bottom"></div>
     	<div id="header">

@@ -894,16 +894,12 @@ blockquote.right {
 
 #the_video {
 	float: left;
-	background: cyan;
 }
 #the_video img {
 	width: 405px;
 	height: 305px;
 }
-
-
 #intro .text {
-	background: red;
 	width: 375px;
 	height: 295px;
 	float: right;
@@ -914,36 +910,42 @@ blockquote.right {
 #intro .buttons {
 	width: 310px;
 	height: 70px;
-	font: bold .85em/1em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
+	font: bold 1em/1em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: .1em;
 	text-transform: uppercase;
 	position: relative;
-	top: 13px;
+	top: 20px;
 	text-align: center;
-	background: url('images/intro_div.png') no-repeat center center;
 	margin: 0 auto;
 }
 #intro .buttons hr {
-	border: none;
-	border-bottom: 1px solid #DB6D6E;
-	width: 10px;
+	border-bottom: 1px solid #fff !important;
+	width: 10px !important;
 	margin: 8px auto;
+	background: none !important;
+	height: 0 !important;
 }
 #intro .buttons .explore hr {
 	margin: 15px auto;
 }
 #intro .buttons a,
 #intro .buttons a:visited {
-	color: #DB6D6E;
+	color: #fff;
 	text-decoration: none;
 }
-#intro .text p.eng {
-	border-bottom: 1px solid #665942;
-	padding: 3px 0 13px;
+#intro .text p.eng,
+#intro .text p.ita {
+	padding: 3px 0;
 }
 #intro .text p.ita {
 	font-style: italic;
-	padding: 13px 0 3px;
+}
+#intro .text hr {
+	border: none;
+	padding: 3px;
+	width: 176px;
+	height: 9px;
+	background: url('images/introtext_hr.png') no-repeat center center;
 }
  
 
