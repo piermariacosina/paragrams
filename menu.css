@@ -4,7 +4,6 @@
 	line-height:1;
 }
 #top-menu li {
-	background:url("images/divider.gif") no-repeat scroll left center #000000;
 }
 #top-menu li li {
 	background-image:none;
@@ -19,14 +18,15 @@ position:relative;
 }
 
 #top-menu a{
-display:block;
-padding:19px 1em;
-text-decoration:none;
-color:#fff;
-text-decoration:none;
+	display: block;
+	padding: 16px 20px 0;
+	text-decoration: none;
+	color: #fff;
+	text-decoration :none;
+	height: 34px;
 }
 #top-menu li li a {
-padding:0.75em 1em;
+	padding:0.75em 1em;
 }
 
 #top-menu li:hover, #top-menu li.sfHover, #top-menu li:hover a,

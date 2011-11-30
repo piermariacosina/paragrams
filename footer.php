@@ -1,6 +1,10 @@
-        <div id="footer">
-        	<div id="copyright">&copy; <?php the_time(__('Y')) ?> <?php bloginfo('name'); ?>. All images are copyrighted by their respective authors.</div>
-            <div id="credits">Powered by Wordpress. Designed by <a href="http://wpshower.com/">WPSHOWER</a></div>
+        <div id="colophon">
+        			<?php
+        					/* A sidebar in the footer? Yep. You can can customize
+        					 * your footer with three columns of widgets.
+        					 */
+        					get_sidebar( 'footer' );
+        				?>
         </div>
     </div>
 <?php wp_footer(); ?>

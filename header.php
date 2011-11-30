@@ -29,43 +29,33 @@
     <script src="<?php bloginfo('template_url'); ?>/js/columnizer.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/columnize.js" type="text/javascript"></script>
 	<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/menu.js'></script>
+	<!--<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/image_appear.js'></script>-->
 
 </head>
 <body <?php body_class(); ?>>
+<div id="backgr_image"></div>
 	<div id="outer">
+		<div class="logo_bottom"></div>
     	<div id="header">
         	<div id="logo">
-        		<?php         		
-	        	ob_start();
-				ob_implicit_flush(0);
-				echo get_option('paragrams_custom_logo'); 
-				$my_logo = ob_get_contents();
-				ob_end_clean();
-        		if (
-		        $my_logo == ''
-        		): ?>
         		<a href="<?php bloginfo("url"); ?>/">
 				<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" /></a>
-        		<?php else: ?>
-        		<a href="<?php bloginfo("url"); ?>/"><img src="<?php echo get_option('paragrams_custom_logo'); ?>" alt="<?php bloginfo('name'); ?>" /></a>        		
-        		<?php endif ?>
+        	</div>
+        	<div><?php get_sidebar(); ?></div>
+        	<div id="twitter_abstract">
+        		<?php 
+        		$tw_post_id=41;
+        		$tw_post= get_post($tw_post_id);
+        		echo $tw_post->post_content;
+        		?>
         	</div>
             <div id="serv">
-            	<div id="search"><?php get_search_form(); ?></div>
+<!--            	<div id="search"><?php get_search_form(); ?></div>-->
                 <div id="navicons">
-                	<ul>
-                    	<li><a id="subscribe" href="<?php bloginfo('rss2_url'); ?>" title="">Subscribe</a></li>
-                    	<li><a id="twitter" href="<?php echo get_option('paragrams_twturl'); ?>" title="">Twitter</a></li>
-                    	<li><a id="facebook" href="<?php echo get_option('paragrams_fbkurl'); ?>" title="">Facebook</a></li>
-                    </ul>
+                	<?php echo do_shortcode('[social_share/]');?>
                 </div>
                 <div id="menu">
-				<?php
-				    if ( function_exists( 'wp_nav_menu' ) )
-				        wp_nav_menu( array( 'theme_location' => 'custom-menu','fallback_cb'=> 'custom_menu','container' => 'ul','menu_id' => 'top-menu', ) );
-				    else
-				        custom_menu();
-				?>
+				<?php custom_menu(); ?>
                 </div>
             </div>
         </div>

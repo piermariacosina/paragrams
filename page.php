@@ -1,6 +1,5 @@
 <?php get_header(); ?> 
 
-<?php get_sidebar(); ?> 
 
             <div id="main-inner">
   
@@ -17,5 +16,5 @@
             
             </div>
         
-
+ 
 <?php get_footer(); ?>
