@@ -309,7 +309,7 @@ if (!function_exists('load_my_scripts')) {
     	$p = $wp_query->get_queried_object();
 		wp_enqueue_script('booking-event-theme-script', get_bloginfo('template_url').'/js/js.js', array('jquery'), '0.1', true );
 
-		wp_localize_script( 'booking-event-theme-script', 'Siteinfo', array( 'slug'=>$p->post_name,'site_url' => site_url() ) );
+		wp_localize_script( 'booking-event-theme-script', 'Siteinfo', array( 'slug'=>$p->post_name,'site_url' => get_bloginfo('template_url') ) );
 
     	}
     }
