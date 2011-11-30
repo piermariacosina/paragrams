@@ -176,10 +176,6 @@ function twentyeleven_widgets_init() {
 		'name' => __( 'Header horizontal', 'twentyeleven' ),
 		'id' => 'header-sidebar',
 		'description' => __( 'Sidebar widget for header', 'twentyeleven' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
 	) );
 
 	register_sidebar( array(
