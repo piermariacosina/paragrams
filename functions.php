@@ -1,9 +1,4 @@
 <?php
-// ===========
-// = Sidebar =
-// ===========
-if ( function_exists('register_sidebar') )
-	{ register_sidebar(); }
 
 // ====================================
 // = WordPress 2.9+ Thumbnail Support =
@@ -176,6 +171,16 @@ add_action('admin_menu', 'themeoptions_admin_menu');
  * @since Twenty Eleven 1.0
  */
 function twentyeleven_widgets_init() {
+
+	register_sidebar( array(
+		'name' => __( 'Header horizontal', 'twentyeleven' ),
+		'id' => 'header-sidebar',
+		'description' => __( 'Sidebar widget for header', 'twentyeleven' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 
 	register_sidebar( array(
 		'name' => __( 'Events horizontal', 'twentyeleven' ),
