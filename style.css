@@ -17,7 +17,7 @@ body {
 	background: #f5f5f5;
 }
 #backgr_image {
-	position: absolute;
+	position: fixed;
 	z-index: -99;
 	height: 100%;
 	width: 100%;
@@ -866,15 +866,14 @@ blockquote.right {
 }*/
 
 #intro {
-	height: 332px;
+	height: 305px;
 	display: block;
 	clear: both;
-	padding: 20px;
+	padding: 50px;
 	background: transparent;
 }
 #intro .intro_wrapper {
-	height: 312px;
-	padding: 10px;
+	height: 305px;
 }
 #intro .intro_wrapper .faq,
 #intro .intro_wrapper .explore {
@@ -895,16 +894,22 @@ blockquote.right {
 
 #the_video {
 	float: left;
+	background: cyan;
 }
 #the_video img {
-
+	width: 405px;
+	height: 305px;
 }
+
+
 #intro .text {
-	width: 310px;
+	background: red;
+	width: 375px;
+	height: 295px;
 	float: right;
 	font: 1.38em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
-	color: #665942;
-	padding: 0 10px;
+	color: white;
+	padding: 5px 15px;
 }
 #intro .buttons {
 	width: 310px;
@@ -916,6 +921,7 @@ blockquote.right {
 	top: 13px;
 	text-align: center;
 	background: url('images/intro_div.png') no-repeat center center;
+	margin: 0 auto;
 }
 #intro .buttons hr {
 	border: none;
