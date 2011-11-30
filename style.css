@@ -57,7 +57,6 @@ caption, th, td {font-weight:strong;text-align:left;}
 }
 #header {
 	height: 280px;
-	border-bottom: solid 1px #000;
 	position: relative;
 	background: url('images/header_background.png') no-repeat center top;
 }
@@ -224,7 +223,7 @@ body.home-page .mcol {
 	width: 310px !important;
 }
 body.home-page .mcol li:first-child {
-	border-bottom: 1px solid #665942;
+	background: url('images/column_hr.gif') no-repeat center bottom;
 }
 .li_container .article:hover {
 	background-color:#fcff79;
@@ -924,6 +923,7 @@ blockquote.right {
 	margin: 8px auto;
 	background: none !important;
 	height: 0 !important;
+	padding: 0 !important;
 }
 #intro .buttons .explore hr {
 	margin: 15px auto;
