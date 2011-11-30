@@ -300,16 +300,44 @@ function get_attachment_id_from_src ($image_src)
 	$id = $wpdb->get_var($query);
 	return $id;
 }
+*/
 
-
-if (function_exists('load_my_scripts')) {
+if (!function_exists('load_my_scripts')) {
     function load_my_scripts() {
+    	global $wp_query;
     	if (!is_admin()) {
-		wp_register_script('image_appear', bloginfo('template_url').'/js/image_appear.js'__FILE__), array('jquery'), '0.1', true );
-		wp_enqueue_script('image_appear');
+    	$p = $wp_query->get_queried_object();
+		wp_enqueue_script('booking-event-theme-script', get_bloginfo('template_url').'/js/js.js', array('jquery'), '0.1', true );
+
+		wp_localize_script( 'booking-event-theme-script', 'Siteinfo', array( 'slug'=>$p->post_name,'site_url' => site_url() ) );
+
     	}
     }
 }
-add_action('init', 'load_my_scripts');*/
+add_action('wp_print_scripts', 'load_my_scripts');
 
+/*
+ * Sum donation with fixed fee amount before sending data to DB and PayPal
+ * @params array() $paypal_vars payment variables to override
+ * @$EM_Booking the booking object
+ * @$obj the gateway object
+ */
+function booking_helper_overrideBooking( $paypal_vars, $EM_Booking, $obj )
+{
+	$donate = ( $_REQUEST['donate'] ) ? $_REQUEST['donate'] : 0;
+	
+	$paypal_vars['donate'] = $donate;
+	
+	$count = count($EM_Booking->tickets_bookings->tickets_bookings);
+	
+	if( $count > 0)
+	{
+		for( $i=1; $i <= $count; $i++ )
+		{
+		 	$paypal_vars['amount_'.$i] = $paypal_vars['amount_'.$i] + $paypal_vars['donate'];
+		}
+	}
+	return $paypal_vars;
+}
+add_filter( 'em_gateway_paypal_get_paypal_vars', 'booking_helper_overrideBooking', 10, 3 );
 ?>

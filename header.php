@@ -30,6 +30,7 @@
     <script src="<?php bloginfo('template_url'); ?>/js/columnize.js" type="text/javascript"></script>
 	<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/menu.js'></script>
 	<!--<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/image_appear.js'></script>-->
+	<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/jquery.backstretch.min.js'></script>
 
 </head>
 <body <?php body_class(); ?>>
