@@ -56,7 +56,7 @@ caption, th, td {font-weight:strong;text-align:left;}
 	position: relative;
 }
 #header {
-	height: 280px;
+	height: 340px;
 	position: relative;
 	background: url('images/header_background.png') no-repeat center top;
 }
@@ -192,7 +192,7 @@ body.home-page .li_container {
 .article {
 	width: 280px;
 	background-color:#FFF;
-	padding: 15px;
+	padding: 25px 15px 15px;
 	overflow: hidden;
 }
 .article img {
@@ -224,6 +224,10 @@ body.home-page .mcol {
 }
 body.home-page .mcol li:first-child {
 	background: url('images/column_hr.gif') no-repeat center bottom;
+	padding-top: 15px;
+}
+body.home-page .mcol li:last-child {
+	padding-bottom: 10px;
 }
 .li_container .article:hover {
 	background-color:#fcff79;
@@ -232,8 +236,7 @@ body.home-page .mcol li:first-child {
 	font: 2em/1.2em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
 	margin-bottom: 15px;
 	letter-spacing: .025em;
-	color: #665942;
-/*	font-weight: 700; */
+	color: #00A7B1;
 }
 .article h2 a {
 	text-decoration:none !important;
@@ -403,14 +406,20 @@ body.home-page .mcol li:first-child {
 	height: 85px;
 	font-family: "Neuton", Georgia, "Times New Roman", Times, serif;
 }
-
+#header #event-sidebar {
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	background: #84765F;
+	width: 750px;
+	padding-left: 210px;
+}
 #header #sidebar > ul {
 	height: 90px;
-	background: url('images/header_sidebar.gif') no-repeat 344px 19px;
+/*	background: url('images/header_sidebar.gif') no-repeat 344px 19px; */
 	position: relative;
 	top: -5px;
 }
-
 #header #sidebar li.widget_autoconnect_premium {
 	float: right;
 	width: 300px;
@@ -426,7 +435,6 @@ body.home-page .mcol li:first-child {
 	width: 40px !important;
 	height: 40px !important;	
 }
-
 /* use proper selectors --> */
 #header #sidebar li.widget_autoconnect_premium div[style="text-align:center"] {
 	text-transform: uppercase;
@@ -453,7 +461,7 @@ body.home-page .mcol li:first-child {
 }
 /* <-- use proper selectors */
 
-#header #sidebar li.widget_em_widget ul li,
+#header #event-sidebar .widget_em_widget ul li,
 #header #sidebar #loginform label {
 	font-size: 1.3em;
 	color: #665942;
@@ -461,38 +469,59 @@ body.home-page .mcol li:first-child {
 #header #sidebar #loginform label {
 	line-height: 1.9em;
 }
-#header #sidebar li.widget_em_widget {
-	width: 285px;
-	padding: 0;
-	text-align: right;
-	padding: 0 30px;
+#header #event-sidebar .widget_em_widget ul {
+	position: absolute;
+	right: 0;
+	overflow: hidden;
+	width: 685px;
 }
-#header #sidebar li.widget_em_widget ul li ul li {
-	float: right;
-	font-size: .9em;
+#header #event-sidebar .widget_em_widget ul li {
+	float: left;
+	padding: 6px 16px 6px 15px;
+	font: 1.24em/1em "Neuton", Georgia, "Times New Roman", Times, serif;
+	background: url('images/eventside_line.png') no-repeat right top;
 }
-#header #sidebar li.widget_em_widget ul li ul li:last-child {
-	padding-right: 15px;
+#header #event-sidebar .widget_em_widget ul li:last-child {
+	background: none;
 }
-#header #sidebar li.widget_em_widget ul li a {
-	font-weight: bold;
-	color: #665942;
-	text-decoration: none;
-	font-size: 1em;
-	line-height: 1.2em;
+#header #event-sidebar .widget_em_widget ul li a {
+	color: #BEB7A9;
 	font-style: italic;
+	letter-spacing: .07em;
+	text-decoration: none;
+	line-height: 1.3em;
+}
+#header #event-sidebar .widget_em_widget ul li a:hover {
+	color: #fff;
+}
+#header #event-sidebar .widget_em_widget ul li ul {
+	position: relative;
+	left: 0;
+	width: auto;
+	text-transform: uppercase;
+	font-size: .73em;
+}
+#header #event-sidebar .widget_em_widget ul li ul li {
+	padding: 0 10px 0 0;
+	color: #BEB7A9;
+	background: none;
+}
+#header #event-sidebar .widget_em_widget ul li ul li:last-child {
+	padding: 0;
 }
 
-#header #sidebar li.widget_em_widget h2,
+#header #event-sidebar .widget_em_widget h3,
 #header #sidebar li.widget_autoconnect_premium h2 {
 	text-transform: uppercase;
 	font: bold 1.13em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: .1em;
 	color: #665942;
 }
-#header #sidebar li.widget_em_widget h2 {
-	margin-bottom: 3px;
-	padding-top: 21px;
+#header #event-sidebar .widget_em_widget h3 {
+	padding-top: 7px;
+	display: inline-block;
+	float: left;
+	color: #f2dc9e;
 }
 #header #sidebar li.widget_autoconnect_premium h2 {
 	display: none;
@@ -868,7 +897,7 @@ blockquote.right {
 	height: 305px;
 	display: block;
 	clear: both;
-	padding: 50px;
+	padding: 35px 50px;
 	background: transparent;
 }
 #intro .intro_wrapper {
