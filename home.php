@@ -8,7 +8,7 @@ Template Name: Home structure
 	<div class="intro_wrapper">
 		 <div id="the_video">
 		 <?php 
-		 echo comedanonna_printVideoContent( 55  );
+		 echo comedanonna_printVideoContent( 55, 'original'  );
 		 ?>
 		 </div>
 		 <div class="text">
