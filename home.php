@@ -18,13 +18,19 @@ Template Name: Home structure
 		 		echo $abstract_post->post_content;
 		 	?>
 		 	<div class="buttons">
-			 	<div class="faq"><a href="<?php bloginfo('url');?>/questions"><span class="eng">FAQ</span><hr/><span class="ita">Domande frequenti</span></a></div>
-			 	<div class="explore"><a href="#"><span class="eng">Explore</span><hr/><span class="ita">Scopri</span></a></div>
+		 		<?php while(the_repeater_field('buttons')){
+		 		     the_sub_field('bilingual'); 
+		 		} ?>
+			 	
 		 	</div>
 		</div>
 	</div>
 </div>
-              <ul class="mcol">
+<div>
+	<?php while(the_repeater_field('title')){
+	     the_sub_field('bilingual'); 
+	} ?>
+           <ul class="mcol">
               
               <?php $my_query = new WP_Query( "cat=5" );
                  if ( $my_query->have_posts() ) { 
@@ -39,5 +45,5 @@ Template Name: Home structure
             wp_reset_postdata();
             }} ?>
             </ul>
- 
+ </div>
 <?php get_footer(); ?>
