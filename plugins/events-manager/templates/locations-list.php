@@ -9,7 +9,7 @@
  * 
  */ 	
 $locations = EM_Locations::get( apply_filters('em_content_locations_args', $args) );
-$args['limit'] = get_option('dbem_events_default_limit');
+$args['limit'] = get_option('dbem_locations_default_limit');
 $args['page'] = (!empty($_REQUEST['page']) && is_numeric($_REQUEST['page']) )? $_REQUEST['page'] : 1;
 if( count($locations) > 0 ){
 	echo EM_Locations::output( $locations, $args );

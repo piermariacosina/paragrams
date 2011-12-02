@@ -8,8 +8,9 @@
  * $args - the args passed onto EM_Events::output()
  * 
  */ 
+
 $events = EM_Events::get( apply_filters('em_content_events_args', $args) );
-$args['limit'] = get_option('dbem_events_default_limit'); //since we are passing this info to an output function or template, we should get all the events first
+$args['limit'] = get_option('dbem_events_default_limit');
 $args['page'] = (!empty($_REQUEST['page']) && is_numeric($_REQUEST['page']) )? $_REQUEST['page'] : 1;
 $events_count = count($events);
 

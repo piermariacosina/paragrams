@@ -16,8 +16,9 @@
 	}
 	//convert scope to an array in event of pagination
 	if(!empty($_REQUEST['scope']) && !is_array($_REQUEST['scope'])){ $_REQUEST['scope'] = explode(',',$_REQUEST['scope']); }
+	//get the events page to display search results
 	?>
-	<form action="<?php echo EM_URI; ?>" method="post" class="em-events-search-form">
+	<form action="<? echo EM_URI; ?>" method="post" class="em-events-search-form">
 		<?php do_action('em_template_events_search_form_header'); ?>
 		<!-- START General Search -->
 		<?php /* This general search will find matches within event_name, event_notes, and the location_name, address, town, state and country. */ ?>
