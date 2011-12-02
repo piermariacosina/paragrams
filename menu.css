@@ -31,9 +31,10 @@ position:relative;
 
 #top-menu li:hover, #top-menu li.sfHover, #top-menu li:hover a,
 #top-menu a:focus, #top-menu a:hover, #top-menu a:active {
-	background:		#fcff79;
-	outline:		0;
-	color:			#000;
+/*	background:	#fcff79; */
+	outline: 0;
+	color: #000;
+	cursor: pointer;
 }
 #top-menu li li a:hover {
 	background:		#000;
