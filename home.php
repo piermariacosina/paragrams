@@ -26,10 +26,12 @@ Template Name: Home structure
 		</div>
 	</div>
 </div>
-<div>
-	<?php while(the_repeater_field('title')){
-	     the_sub_field('bilingual'); 
-	} ?>
+<div class="values">
+	<h2 class="title">
+		<?php while(the_repeater_field('title')){
+		     the_sub_field('bilingual'); 
+		} ?>
+	</h2>
            <ul class="mcol">
               
               <?php $my_query = new WP_Query( "cat=5" );
