@@ -57,7 +57,8 @@ caption, th, td {font-weight:strong;text-align:left;}
 #header {
 	height: 340px;
 	position: relative;
-	background: url('images/header_background.png') no-repeat center top;
+	background: url('images/header_background.png') no-repeat center top fixed;
+	ba
 }
 #header #logo {
 	height: 280px;
@@ -216,7 +217,7 @@ body.home-page .values h2.title .ita {
 body.page #main-inner .li_container {
 	margin: 0 auto;
 	width: 948px;
-	background: cyan;
+	background: none;
 }
 body.page #main-inner .li_container ul.mcol {
 	display: inline-block;
@@ -226,6 +227,7 @@ body.page #main-inner .li_container ul.mcol {
 body.page #main-inner .li_container ul.mcol li {
 	background: #fff;
 	width: 306px;
+	border-radius: 3px;
 }
 body.page #main-inner .li_container ul.mcol li a {
 	text-decoration: none;
@@ -233,7 +235,7 @@ body.page #main-inner .li_container ul.mcol li a {
 	display: block;
 }
 body.page #main-inner .li_container ul.mcol li p.description {
-	padding: 0 10px 10px;
+	padding: 0 13px 11px 11px;
 	margin: 0;
 }
 body.page #main-inner .li_container ul.mcol li h3 {
@@ -254,9 +256,11 @@ body.page #main-inner .li_container ul.mcol li span.image {
 	display: block;
 }
 body.page #main-inner .li_container ul.mcol li p.info .date {
-	font: 2em/1.2em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
+	font: 1.4em/1.2em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
 }
-
+body.page #main-inner .li_container ul.mcol li p.info .location {
+	text-transform: capitalize;
+}
 
 /*
 ** Exceptions for inside pages <--
@@ -411,13 +415,15 @@ body.home-page .mcol li:last-child {
 #main-inner {
 }
 body.page #main-inner .article {
-	background: red;
+	background: none;
 	width: auto;
 	padding: 0;
 }
 #main-inner .article h1 {
-	font-size:30px;
-	font-weight:normal;
+	padding: 20px 0 10px;
+	font: bold 2.3em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
+	color: white;
+	text-transform: uppercase;
 }
 #main-inner .article .postmetadata {
 	font-size:10px;
@@ -1160,6 +1166,9 @@ table.em-calendar td.month_name {
 table.em-calendar td a.em-calnav {
 	color: #C85600;
 	text-decoration: none;
+}
+table.em-calendar tr {
+	font-size: 1.1em;
 }
 table.em-calendar tr.days-names {
 	font-weight: bold;
