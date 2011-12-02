@@ -14,9 +14,9 @@ $args['limit'] = get_option('dbem_events_default_limit');
 $args['page'] = (!empty($_REQUEST['page']) && is_numeric($_REQUEST['page']) )? $_REQUEST['page'] : 1;
 $events_count = count($events);
 
-if( get_option('dbem_events_page_search') ){
+/*if( get_option('dbem_events_page_search') ){
 	em_locate_template('templates/events-search.php',true);
-}	
+}*/	
 if( $events_count > 0 ){
 	//If there's a search, let's change the pagination a little here
 	if(!empty($_REQUEST['_wpnonce']) && wp_verify_nonce($_REQUEST['_wpnonce'], 'search_events')){

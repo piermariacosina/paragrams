@@ -58,5 +58,13 @@
 				<?php custom_menu(); ?>
                 </div>
             </div>
-            <?php get_sidebar("events");?>
+            <?php
+            if(is_front_page()){ 
+           	 get_sidebar("events");
+            }else{
+	            if( get_option('dbem_events_page_search') ){
+	            	em_locate_template('templates/events-search.php',true);
+	            }
+            }
+            ?>
         </div>
