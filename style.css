@@ -135,11 +135,8 @@ caption, th, td {font-weight:strong;text-align:left;}
 #serv #navicons li {
 	float:left;
 }
-#serv #navicons .mr_social_sharing:last-child {
-	
+#serv #navicons .mr_social_sharing:last-child {	
 }
-
-
 #serv #menu {
 	background-color: #84765F;
 	height: 50px;
@@ -151,6 +148,16 @@ caption, th, td {font-weight:strong;text-align:left;}
 	font: 1.39em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: .075em;
 }
+#header .em-events-search {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 10px;
+}
+
+
+
+
 .pagetitle {
 	font-size:30px;
 	font-weight:normal;
