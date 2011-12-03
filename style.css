@@ -266,7 +266,9 @@ body.page #main-inner .li_container ul.mcol li p.info .location {
 ** Exceptions for inside pages <--
 */
 
-
+body.single .article {
+	width: auto;
+}
 .article {
 	width: 280px;
 	background-color:#FFF;
