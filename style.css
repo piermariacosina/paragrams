@@ -155,9 +155,6 @@ caption, th, td {font-weight:strong;text-align:left;}
 	padding: 10px;
 }
 
-
-
-
 .pagetitle {
 	font-size:30px;
 	font-weight:normal;
@@ -268,14 +265,26 @@ body.page #main-inner .li_container ul.mcol li p.info .date {
 body.page #main-inner .li_container ul.mcol li p.info .location {
 	text-transform: capitalize;
 }
+body.single .article {
+	width: auto;
+}
+body.single-event .article #left-column {
+	float: left;
+	width: 615px;
+	padding: 0;
+	background: red;
+}
+body.single-event .article #right-column {
+	width: 315px;
+	padding: 0;
+	background: cyan;
+	overflow: hidden;
+}
 
 /*
 ** Exceptions for inside pages <--
 */
 
-body.single .article {
-	width: auto;
-}
 .article {
 	width: 280px;
 	background-color:#FFF;
@@ -290,8 +299,6 @@ body.single .article {
 }
 .article ul, .article ol {
 }
-
-
 .article ul {
 	list-style-type: none;
 }
