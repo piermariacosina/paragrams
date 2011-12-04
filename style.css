@@ -267,18 +267,24 @@ body.page #main-inner .li_container ul.mcol li p.info .location {
 }
 body.single .article {
 	width: auto;
+	background: #f2edd4;
+	overflow: visible;
+	height: auto;
 }
 body.single-event .article #left-column {
-	float: left;
-	width: 615px;
-	padding: 0;
-	background: red;
+	width: 605px;
+	padding: 20px 20px 20px 40px;
+	background: white;
+	position: absolute;
+	left: -20px;
 }
 body.single-event .article #right-column {
 	width: 315px;
 	padding: 0;
-	background: cyan;
+	background: #FBF9D6;
 	overflow: hidden;
+	position: relative;
+	left: 630px;
 }
 
 /*
