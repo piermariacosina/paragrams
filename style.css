@@ -289,6 +289,82 @@ body.single-event .article #right-column .booking {
 	width: 265px;
 	background: #FBF9D6;
 }
+body.single-event .article #right-column .booking h3,
+#people h3,
+#people .partecipants h2 {
+	font: bold 1.6em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: .1em;
+	color: #665942;
+	text-transform: uppercase;
+}
+body.single-event .article #right-column .booking h3 .eng,
+#people h3 .eng,
+#people .partecipants h2 .eng {
+	padding-right: 10px;
+	border-right: 1px solid #665942;
+}
+body.single-event .article #right-column .booking h3 .ita,
+#people h3 .ita,
+#people .partecipants h2 .ita {
+	padding: 0 10px;
+	font-weight: 400;
+	font-style: italic;
+	font-size: .8em;
+}
+body.single-event .article #right-column .booking p {
+	margin: 0;
+}
+body.single-event .article #right-column .booking .info {
+	display: block;
+	background: #ede5ce;
+	padding: 10px 0;
+	margin: 15px 0 5px;
+}
+body.single-event .article #right-column .booking hr,
+#people hr {
+	margin: 20px 0;
+	padding: 0;
+	border: none;
+	border-bottom: 1px dotted #655740;
+}
+body.single-event .article #right-column .booking .spaces,
+.em-booking-form-details p label,
+#people .cook {
+	font: bold 1.3em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
+}
+body.single-event .article #right-column .booking .spaces span,
+#people .cook .eng {
+	padding-right: 5px;
+}
+body.single-event .article #right-column .booking .spaces .ita,
+#people .cook .ita {
+	font-style: italic;
+	border-left: 1px solid #665942;
+	padding-left: 5px;
+}
+body.single-event .article #right-column .booking .spaces .number {
+	font: bold 2em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	padding-left: 10px;
+	color: #D87264;
+}
+body.single-event .article #right-column .booking .date,
+body.single-event .article #right-column .booking .time {
+	display: inline-block;
+	font-size: 1.4em;
+	padding: 0 35px;
+	margin: 0;
+}
+body.single-event .article #right-column .booking .time {
+	float: right;
+}
+body.single-event .article #right-column .booking .location {
+	text-align: center;
+	text-transform: capitalize;
+}
+body.single-event .article #right-column .booking .info hr {
+	margin: 10px 0;
+	border-color: #faf9d6;
+}
 body.single-event .article #right-column #people {
 	background: #fbfaf5;
 	padding: 20px;
@@ -303,6 +379,32 @@ body.single-event .article #right-column #people .avatar {
 body.single-event .article #right-column #people .avatar img {
 	margin: 0;
 }
+.em-booking-form-details p {
+	margin-bottom: 12px !important;
+}
+.em-booking-form-details p label {
+	font-size: 1em;
+	padding: 0 15px 5px 0;
+	width: auto !important;
+}
+.em-booking-form-details p textarea {
+	padding: 5px;
+	width: 255px;
+	border: 1px solid #84765E;
+	height: 70px;
+}
+.em-booking-form-details p input {
+	padding: 5px;
+	border: 1px solid #84765E;
+	width: 120px !important;
+	clear: both;
+	margin-right: 100px;
+}
+#people .cook a {
+	text-decoration: none;
+	color: #1f659d;
+}
+
 
 body.single-event .article h2.name {
 	font: italic 3.4em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
@@ -474,7 +576,8 @@ body.page #main-inner .article {
 	width: auto;
 	padding: 0;
 }
-#main-inner .article h1 {
+#main-inner .article h1,
+#members-directory-form h3 {
 	padding: 20px 0 10px;
 	font: bold 2.3em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
 	color: white;
@@ -1245,4 +1348,84 @@ table.em-calendar tr.days-names td {
 	padding: 0 !important;
 	width: auto !important;
 	float: none !important;
+}
+.em-booking-buttons {
+	width: 100% !important;
+	text-align: center;
+}
+.em-booking-buttons #em-booking-submit {
+	border: 1px #FF6B71 solid;
+	width: 100%;
+	background: #FB9A91;
+	padding: 10px 0;
+	font: 1.4em/1em "Neuton", Georgia, "Times New Roman", Times, serif;
+	color: #FFF8F1;
+}
+.em-booking-buttons #em-booking-submit:hover {
+	color: #cb4145;
+}
+
+/*
+** map
+*/
+
+.em-location-map {
+	width: 605px !important;
+}
+
+/*
+** budypress
+*/
+
+body.directory .padder {
+	background: #e9e1c4;
+	margin-top: 115px;
+}
+
+.item-list-tabs {
+	visibility: hidden;
+}
+#members-directory-form {
+	position: relative;
+}
+#members-directory-form h3 {
+	display: inline-block;
+	position: absolute;
+	top: -30px;
+	padding: 0;
+}
+#members-dir-search {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 15px;
+}
+ul.item-list {
+	width: 605px !important;
+	padding: 20px 20px 20px 40px;
+	background: #fff;
+	position: relative;
+	left: -20px;
+}
+ul.item-list li {
+	border-bottom: 1px solid #685a41 !important;
+	overflow: auto;
+}
+ul.item-list li div.item-title {
+	font: bold 1.5em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif !important;
+	text-transform: capitalize;
+}
+ul.item-list li div.item-title a {
+	text-decoration: none;
+}
+ul.item-list li .item-meta {
+	font-size: 1.5em !important;
+	padding-top: 10px;
+	font-style: italic;
+}
+ul.item-list li .item-meta .activity {
+	background: none;
+	border-radius: 0;
+	border: none;
+	padding: 0;
 }

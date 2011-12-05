@@ -318,14 +318,26 @@ if (!function_exists('load_my_scripts')) {
     	global $wp_query;
     	if (!is_admin()) {
     	$p = $wp_query->get_queried_object();
-		wp_enqueue_script('booking-event-theme-script', get_bloginfo('template_url').'/js/js.js', array('jquery'), '0.1', true );
-
+		wp_enqueue_script('dialog-theme-script', get_bloginfo('template_url').'/js/jquery-ui-1.8.16.custom.min.js', array('jquery'), '1.8.16', false );
+		wp_enqueue_script('booking-event-theme-script', get_bloginfo('template_url').'/js/js.js', array('jquery'), '0.1', false );
 		wp_localize_script( 'booking-event-theme-script', 'Siteinfo', array( 'slug'=>$p->post_name,'site_url' => get_bloginfo('template_url') ) );
 
     	}
     }
+	add_action('wp_print_scripts', 'load_my_scripts');
 }
-add_action('wp_print_scripts', 'load_my_scripts');
+
+
+if( !function_exists('load_my_styles'))
+{
+	function load_my_styles()
+	{
+		wp_register_style( 'dialog-theme-style', get_bloginfo('template_url').'/js/css/jquery-ui-dialog.css', '', '1.8.16');
+		wp_enqueue_style('dialog-theme-style');
+	}
+	add_action('wp_print_styles', 'load_my_styles');
+}
+
 
 /*
  * Sum donation with fixed fee amount before sending data to DB and PayPal
