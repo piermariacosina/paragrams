@@ -1381,10 +1381,6 @@ body.directory .padder {
 	background: #e9e1c4;
 	margin-top: 115px;
 }
-
-.item-list-tabs {
-	visibility: hidden;
-}
 #members-directory-form {
 	position: relative;
 }
