@@ -19,5 +19,5 @@ function globalMessages( message )
 Number.prototype.roundNumber = function( rlength )
 {
 	var newnumber = Math.round(this*Math.pow(10,rlength))/Math.pow(10,rlength);
-	 return parseFloat(newnumber); // Output the result to the form field (change for your purposes)
+	return parseFloat(newnumber); // Output the result to the form field (change for your purposes)
 };
