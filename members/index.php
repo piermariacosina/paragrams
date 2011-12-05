@@ -30,7 +30,7 @@
 
 			</div><!-- #members-dir-search -->
 
-			<div class="item-list-tabs" role="navigation">
+			<!--<div class="item-list-tabs" role="navigation">
 				<ul>
 					<li class="selected" id="members-all"><a href="<?php echo trailingslashit( bp_get_root_domain() . '/' . bp_get_members_root_slug() ); ?>"><?php printf( __( 'All Members <span>%s</span>', 'buddypress' ), bp_get_total_member_count() ); ?></a></li>
 
@@ -45,7 +45,7 @@
 				</ul>
 			</div><!-- .item-list-tabs -->
 
-			<div class="item-list-tabs" id="subnav" role="navigation">
+			<!--<div class="item-list-tabs" id="subnav" role="navigation">
 				<ul>
 
 					<?php do_action( 'bp_members_directory_member_sub_types' ); ?>
@@ -68,7 +68,7 @@
 						</select>
 					</li>
 				</ul>
-			</div>
+			</div>-->
 
 			<div id="members-dir-list" class="members dir-list">
 
