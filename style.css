@@ -289,6 +289,22 @@ body.single-event .article #right-column .booking {
 	width: 265px;
 	background: #FBF9D6;
 }
+body.single-event .article #right-column .booking h3 {
+	font: bold 1.6em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: .1em;
+	color: #665942;
+	text-transform: uppercase;
+}
+body.single-event .article #right-column .booking h3 .eng {
+	padding-right: 10px;
+	border-right: 1px solid #665942;
+}
+body.single-event .article #right-column .booking h3 .ita {
+	padding-left: 10px;
+	font-weight: 400;
+	font-style: italic;
+	font-size: .8em;
+}
 body.single-event .article #right-column #people {
 	background: #fbfaf5;
 	padding: 20px;
@@ -1245,4 +1261,12 @@ table.em-calendar tr.days-names td {
 	padding: 0 !important;
 	width: auto !important;
 	float: none !important;
+}
+
+/*
+** map
+*/
+
+.em-location-map {
+	width: 605px !important;
 }
