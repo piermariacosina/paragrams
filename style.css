@@ -576,7 +576,8 @@ body.page #main-inner .article {
 	width: auto;
 	padding: 0;
 }
-#main-inner .article h1 {
+#main-inner .article h1,
+#members-directory-form h3 {
 	padding: 20px 0 10px;
 	font: bold 2.3em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
 	color: white;
@@ -1370,4 +1371,61 @@ table.em-calendar tr.days-names td {
 
 .em-location-map {
 	width: 605px !important;
+}
+
+/*
+** budypress
+*/
+
+body.directory .padder {
+	background: #e9e1c4;
+	margin-top: 115px;
+}
+
+.item-list-tabs {
+	visibility: hidden;
+}
+#members-directory-form {
+	position: relative;
+}
+#members-directory-form h3 {
+	display: inline-block;
+	position: absolute;
+	top: -30px;
+	padding: 0;
+}
+#members-dir-search {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 15px;
+}
+ul.item-list {
+	width: 605px !important;
+	padding: 20px 20px 20px 40px;
+	background: #fff;
+	position: relative;
+	left: -20px;
+}
+ul.item-list li {
+	border-bottom: 1px solid #685a41 !important;
+	overflow: auto;
+}
+ul.item-list li div.item-title {
+	font: bold 1.5em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif !important;
+	text-transform: capitalize;
+}
+ul.item-list li div.item-title a {
+	text-decoration: none;
+}
+ul.item-list li .item-meta {
+	font-size: 1.5em !important;
+	padding-top: 10px;
+	font-style: italic;
+}
+ul.item-list li .item-meta .activity {
+	background: none;
+	border-radius: 0;
+	border: none;
+	padding: 0;
 }
