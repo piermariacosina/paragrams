@@ -300,11 +300,64 @@ body.single-event .article #right-column .booking h3 .eng {
 	border-right: 1px solid #665942;
 }
 body.single-event .article #right-column .booking h3 .ita {
-	padding-left: 10px;
+	padding: 0 10px;
 	font-weight: 400;
 	font-style: italic;
 	font-size: .8em;
 }
+body.single-event .article #right-column .booking p {
+	margin: 0;
+}
+body.single-event .article #right-column .booking .info {
+	display: block;
+	background: #ede5ce;
+	padding: 10px 0;
+	margin: 15px 0 5px;
+}
+body.single-event .article #right-column .booking hr {
+	margin: 20px 0;
+	padding: 0;
+	border: none;
+	border-bottom: 1px dotted #655740;
+}
+body.single-event .article #right-column .booking .spaces {
+	font: bold 1.3em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
+}
+body.single-event .article #right-column .booking .spaces span {
+	padding-right: 5px;
+}
+body.single-event .article #right-column .booking .spaces .ita {
+	font-style: italic;
+	border-left: 1px solid #665942;
+	padding-left: 5px;
+}
+body.single-event .article #right-column .booking .spaces .number {
+	font: bold 2em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	padding-left: 10px;
+	color: #D87264;
+}
+
+body.single-event .article #right-column .booking .date,
+body.single-event .article #right-column .booking .time {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	padding: 0 30px;
+	margin: 0;
+}
+body.single-event .article #right-column .booking .time {
+	float: right;
+}
+
+body.single-event .article #right-column .booking .location {
+	text-align: center;
+}
+
+body.single-event .article #right-column .booking .info hr {
+	margin: 10px 0;
+	border-color: #faf9d6;
+}
+
 body.single-event .article #right-column #people {
 	background: #fbfaf5;
 	padding: 20px;
