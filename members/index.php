@@ -20,7 +20,7 @@
 
 		<form action="" method="post" id="members-directory-form" class="dir-form">
 
-			<h3><?php _e( 'Members Directory', 'buddypress' ); ?></h3>
+			<h3><span class="eng">Users</span><span class="ita">Utenti</span></h3>
 
 			<?php do_action( 'bp_before_directory_members_content' ); ?>
 
