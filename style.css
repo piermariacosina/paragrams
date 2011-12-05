@@ -281,10 +281,43 @@ body.single-event .article #left-column {
 body.single-event .article #right-column {
 	width: 315px;
 	padding: 0;
-	background: #FBF9D6;
-	overflow: hidden;
 	position: relative;
 	left: 630px;
+}
+body.single-event .article #right-column .booking {
+	padding: 15px 15px 15px 20px;
+	width: 265px;
+	background: #FBF9D6;
+}
+body.single-event .article #right-column #people {
+	background: #fbfaf5;
+	padding: 20px;
+	width: 295px;
+}
+body.single-event .article #right-column #people .avatar {
+	display: inline-block;
+	float: none;
+	text-align: left;
+	padding: 0;
+}
+body.single-event .article #right-column #people .avatar img {
+	margin: 0;
+}
+
+body.single-event .article h2.name {
+	font: italic 3.4em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
+	margin-bottom: 15px;
+	letter-spacing: .025em;
+	color: #D87264;
+}
+body.single-event .article .menu {
+	background: #ede6ce;
+	padding: 15px;
+	margin: 30px 0;
+}
+body.single-event .article .menu h2 {
+	font: italic 2.3em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	color: #D87264;
 }
 
 /*
@@ -1170,6 +1203,10 @@ blockquote.right {
 
 /* OVERWRITE STYLES */
 
+/*
+** calendar
+*/
+
 div.em-calendar-wrapper {
 	height: 200px;
 	color: #665942;
@@ -1198,4 +1235,14 @@ table.em-calendar tr.days-names {
 }
 table.em-calendar tr.days-names td {
 	text-transform: lowercase;
+}
+
+/*
+** booking
+*/
+
+.em-booking-form-details {
+	padding: 0 !important;
+	width: auto !important;
+	float: none !important;
 }
