@@ -404,6 +404,8 @@ body.single-event .article #right-column #people .avatar img {
 	text-decoration: none;
 	color: #1f659d;
 }
+
+
 body.single-event .article h2.name {
 	font: italic 3.4em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
 	margin-bottom: 15px;
@@ -419,153 +421,6 @@ body.single-event .article .menu h2 {
 	font: italic 2.3em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
 	color: #D87264;
 }
-body.register #outer {
-	height: auto;
-	background: #f2edd4;	
-}
-body.register .page {
-	height: auto;
-	position: relative;
-}
-.standard-form #basic-details-section,
-.standard-form #blog-details-section,
-.standard-form #profile-details-section {
-	float: none !important;
-	width: 440px !important;
-}
-.standard-form #profile-details-section {
-	float: none;
-}
-#profile-details-section {
-	width: 440px;
-	padding: 20px 20px 20px 40px;
-	background: white repeat 0% 0%;
-	position: relative;
-	left: -20px;
-}
-#basic-details-section {
-	width: 440px;
-	padding: 20px 40px 20px 20px;
-	background: white repeat 0% 0%;
-	position: absolute;
-	right: -20px;
-	top: 188px;
-}
-.standard-form p.description {
-	font: 400 1.2em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif !important;
-	color: #665942 !important;
-	text-align: left;
-}
-.standard-form textarea, .standard-form input[type="text"], 
-.standard-form select,
-.standard-form input[type="password"],
-.dir-search input[type="text"] {
-	background-color: #f4f1e7;
-	border: 0px !important;
-	border-radius: 0px !important;
-	color: #888 !important;
-	padding: 6px !important;
-	width: 98% !important;
-}
-.datebox select[id*="day"] {
-	width: 110px !important;
-}
-
-.datebox select[id*="month"] {
-	width: 214px !important;
-}
-.datebox select[id*="year"] {
-	width: 110px !important;
-}
-.register-section h4 {
-	font: italic 3.4em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
-	letter-spacing: 0.025em;
-	color: #00a7b1;
-	margin-bottom: 70px;
-}
-#profile-details-section h4 {
-	padding-top: 108px;
-}
-#register-page h2 {
-	font: bold 3.4em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
-	letter-spacing: 0.025em;
-	color: #d87264;
-	text-transform: uppercase;
-	text-align: right;
-	padding: 20px;
-}
-form[name="signup_form"] p {
-	font: italic 1.4em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
-	color: #665942;
-	text-align: right;
-	float: right;
-}
-.editfield label, .register-section label, .editfield .radio span {
-	font: 1.4em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
-	letter-spacing: 0.06em;
-	color: #665942;
-	text-transform: uppercase;
-	
-}
-.editfield {
-	padding-bottom: 5px;
-	display: inline-block;
-	width: 100%;
-}
-#basic-details-section input {
-	margin-bottom: 15px;
-}
-#basic-details-section #signup_password {
-	margin-bottom: 19px;
-}
-/*
-.submit button,
-.submit a.button,
-*/
-.submit input[type="submit"]
-/*
-.submit input[type="button"],
-.submit input[type="reset"],
-.submit ul.button-nav li a,
-.submit div.generic-button a,
-.comment-reply-link
-*/
- {
-	background: #e99a91;
-	border-radius: 12px 12px 12px 12px;
-	cursor: pointer;
-	/*font: 12px/14px Arial,Tahoma,Verdana,sans-serif;*/
-	font: 1.7em/1.1em bold "Neuton",Georgia,"Times New Roman",Times,serif;
-	color: white;
-	padding: 15px 15px;
-	text-align: center;
-	text-decoration: none;
-	border: none;
-}
-.submit {
-	margin-bottom: 30px;
-	border-top: 0 !important;
-	position: relative;
-	bottom: 68px;
-}
-.standard-form label, .standard-form span.label {
-	margin: 0 !important;
-	padding: 15px 0 5px 0;
-	font-weight: 400 !important;
-}
-#profile-details-section .radio div[id*="field"] label {
-	padding: 3px 0;
-	height: 14px;
-	overflow: hidden;
-}
-
-
-#profile-details-section .datebox {
-	margin-top: -7px;
-}
-
-
-
 
 /*
 ** Exceptions for inside pages <--
@@ -1445,6 +1300,10 @@ blockquote.right {
 }
 
 
+
+
+
+
 /* OVERWRITE STYLES */
 
 /*
@@ -1515,7 +1374,7 @@ table.em-calendar tr.days-names td {
 }
 
 /*
-** buddypress
+** budypress
 */
 
 body.directory .padder {
@@ -1536,27 +1395,7 @@ body.directory .padder {
 	right: 0;
 	top: 0;
 	margin: 15px;
-	width: 260px;
 }
-#members-dir-search label input {
-	width: 160px !important;
-}
-
-#members_search_submit {
-	position: absolute;
-	right: 0;
-	top: 0;
-	border: 1px #FF6B71 solid;
-	width: auto;
-	background: #FB9A91;
-	padding: 7px 10PX 8PX;
-	font: 1.05em/.75em "Neuton", Georgia, "Times New Roman", Times, serif;
-	color: white;
-	text-transform: uppercase;
-}
-
-
-
 ul.item-list {
 	width: 605px !important;
 	padding: 20px 20px 20px 40px;
@@ -1567,9 +1406,6 @@ ul.item-list {
 ul.item-list li {
 	border-bottom: 1px solid #685a41 !important;
 	overflow: auto;
-}
-ul.item-list li:last-child {
-	border-bottom: none !important;
 }
 ul.item-list li div.item-title {
 	font: bold 1.5em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif !important;
@@ -1588,71 +1424,4 @@ ul.item-list li .item-meta .activity {
 	border-radius: 0;
 	border: none;
 	padding: 0;
-	font: italic .9em/1.1em "Neuton", Georgia, "Times New Roman", Times, serif;
-	color: #665942;
-}
-ul.item-list span.activity {
-	font-size: 100%;
-	opacity: 1 !important;
-	padding: 0;
-}
-ul.item-list li:nth-of-type(even) div.item-title a {
-	color: #7BB9BA;
-}
-ul.item-list li:nth-of-type(odd) div.item-title a {
-	color: #D87264;
-}
-ul.item-list li:nth-of-type(even) {
-	background: #f6f3e3;
-}
-.padder div.pagination {
-	background: none !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	width: 605px;
-	padding: 20px !important;
-}
-
-
-
-.padder div.pagination .pag-count {
-	font: 1.4em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
-	color: #665942;
-}
-
-/*
-** profile
-*/
-
-body.profile #user-side {
-	width: 200px;
-	float: left;
-	overflow: hidden;
-	background: cyan;
-}
-body.profile #item-body {
-	width: 600px;
-	display: inline-block;
-}
-div#item-header div#item-header-content {
-	margin-left: 0 !important;
-}
-div.item-list-tabs {
-	clear: none !important;
-	margin: 0 !important;
-}
-div.item-list-tabs ul li:first-child {
-	margin-left: 0 !important;
-}
-div.item-list-tabs ul li {
-	float: none !important;
-	margin: 0 !important;
-}
-div.item-list-tabs#subnav {
-	width: 200px;
-	float: left;
-}
-div.profile {
-	float: right;
-	background: yellow;
 }
