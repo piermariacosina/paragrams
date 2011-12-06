@@ -31,6 +31,8 @@
 	<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/menu.js'></script>
 	<!--<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/image_appear.js'></script>-->
 	<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/jquery.backstretch.min.js'></script>
+	<link type="text/css" href="/cometchat/cometchatcss.php" rel="stylesheet" charset="utf-8">
+	<script type="text/javascript" src="/cometchat/cometchatjs.php" charset="utf-8"></script>
 
 </head>
 <body <?php body_class(); ?>>
@@ -53,6 +55,7 @@
 <!--            	<div id="search"><?php get_search_form(); ?></div>-->
                 <div id="navicons">
                 	<?php echo do_shortcode('[social_share/]');?>
+                	
                 </div>
                 <div id="menu">
 				<?php custom_menu(); ?>
