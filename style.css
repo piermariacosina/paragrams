@@ -1536,7 +1536,27 @@ body.directory .padder {
 	right: 0;
 	top: 0;
 	margin: 15px;
+	width: 260px;
 }
+#members-dir-search label input {
+	width: 160px !important;
+}
+
+#members_search_submit {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 1px #FF6B71 solid;
+	width: auto;
+	background: #FB9A91;
+	padding: 7px 10PX 8PX;
+	font: 1.05em/.75em "Neuton", Georgia, "Times New Roman", Times, serif;
+	color: white;
+	text-transform: uppercase;
+}
+
+
+
 ul.item-list {
 	width: 605px !important;
 	padding: 20px 20px 20px 40px;
@@ -1571,6 +1591,11 @@ ul.item-list li .item-meta .activity {
 	font: italic .9em/1.1em "Neuton", Georgia, "Times New Roman", Times, serif;
 	color: #665942;
 }
+ul.item-list span.activity {
+	font-size: 100%;
+	opacity: 1 !important;
+	padding: 0;
+}
 ul.item-list li:nth-of-type(even) div.item-title a {
 	color: #7BB9BA;
 }
@@ -1582,8 +1607,18 @@ ul.item-list li:nth-of-type(even) {
 }
 .padder div.pagination {
 	background: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 605px;
+	padding: 20px !important;
 }
 
+
+
+.padder div.pagination .pag-count {
+	font: 1.4em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	color: #665942;
+}
 
 /*
 ** profile
@@ -1612,4 +1647,12 @@ div.item-list-tabs ul li:first-child {
 div.item-list-tabs ul li {
 	float: none !important;
 	margin: 0 !important;
+}
+div.item-list-tabs#subnav {
+	width: 200px;
+	float: left;
+}
+div.profile {
+	float: right;
+	background: yellow;
 }
