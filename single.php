@@ -6,7 +6,7 @@
   
               <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
                 <div class="article" id="post-<?php the_ID(); ?>">
-                      <h1><?php the_title(); ?></h1>
+                      <!--<h1><?php the_title(); ?></h1>-->
                       <!--<div class="postmetadata">
                           Posted: <?php the_time(__('F jS, Y')) ?>&nbsp;&#721;&nbsp;<?php printf(__('Filled under: %s'), get_the_category_list(', ')); ?>&nbsp;&#721;&nbsp;
                           <?php comments_popup_link(__('No Comments'), __('1 Comment'), __('% Comments'), '', __('Comments Closed') ); ?><?php edit_post_link(__('Edit this entry'), '&nbsp;&#721;&nbsp;', ''); ?>
