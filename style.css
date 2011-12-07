@@ -421,6 +421,154 @@ body.single-event .article .menu h2 {
 	font: italic 2.3em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
 	color: #D87264;
 }
+body.register #outer {
+	height: auto;
+}
+
+body.register #content {
+	height: auto;
+	position: relative;
+	background: #F2EDD4;
+	padding: 40px 0 20px;
+}
+.standard-form #basic-details-section,
+.standard-form #blog-details-section,
+.standard-form #profile-details-section {
+	float: none !important;
+	width: 440px !important;
+}
+.standard-form #profile-details-section {
+	float: none;
+}
+#profile-details-section {
+	width: 440px;
+	padding: 20px 20px 20px 40px;
+	background: white repeat 0% 0%;
+	position: relative;
+	left: -20px;
+}
+#basic-details-section {
+	width: 440px;
+	padding: 20px 40px 20px 20px;
+	background: white repeat 0% 0%;
+	position: absolute;
+	right: -20px;
+	top: 188px;
+}
+.standard-form p.description {
+	font: 400 1.2em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif !important;
+	color: #665942 !important;
+	text-align: left;
+}
+.standard-form textarea, .standard-form input[type="text"], 
+.standard-form select,
+.standard-form input[type="password"],
+.dir-search input[type="text"] {
+	background-color: #f4f1e7;
+	border: 0px !important;
+	border-radius: 0px !important;
+	color: #888 !important;
+	padding: 6px !important;
+	width: 98% !important;
+}
+.datebox select[id*="day"] {
+	width: 110px !important;
+	margin-top: 5px !important;
+}
+
+.datebox select[id*="month"] {
+	width: 214px !important;
+}
+.datebox select[id*="year"] {
+	width: 110px !important;
+}
+.register-section h4 {
+	/*
+	font: italic 3.4em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	letter-spacing: 0.025em;
+	color: #00a7b1;
+	margin-bottom: 70px;
+	*/
+	font: italic 2em/1.2em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0.025em;
+	margin-bottom: 15px;
+	letter-spacing: .025em;
+	color: #00A7B1;
+	
+}
+#profile-details-section h4 {
+	padding-top: 108px;
+}
+.standard-form#signup_form div.submit {
+	margin: 0;
+}
+
+
+.editfield label, .register-section label, .editfield .radio span {
+	font: 1.2em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	letter-spacing: 0.06em;
+	color: #665942;
+	text-transform: uppercase;	
+	letter-spacing: .07em;
+}
+.editfield {
+	display: inline-block;
+	width: 100%;
+}
+#basic-details-section input {
+	margin-bottom: 10px;
+}
+#basic-details-section #signup_password {
+	margin-bottom: 14px;
+}
+/*
+.submit button,
+.submit a.button,
+*/
+.submit input[type="submit"]
+/*
+.submit input[type="button"],
+.submit input[type="reset"],
+.submit ul.button-nav li a,
+.submit div.generic-button a,
+.comment-reply-link
+*/
+ {
+	background: #e99a91;
+	border-radius: 12px 12px 12px 12px;
+	cursor: pointer;
+	/*font: 12px/14px Arial,Tahoma,Verdana,sans-serif;*/
+	font: 1.7em/1.1em bold "Neuton",Georgia,"Times New Roman",Times,serif;
+	color: white;
+	padding: 15px 15px;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+}
+.submit {
+	/*
+	margin-bottom: 30px;
+	border-top: 0 !important;
+	position: relative;
+	bottom: 68px;
+	*/
+}
+.standard-form label, .standard-form span.label {
+	margin: 0 !important;
+	padding: 15px 0 5px 0;
+	font-weight: 400 !important;
+}
+#profile-details-section .radio div[id*="field"] label {
+	padding: 3px 0;
+	height: 14px;
+	overflow: hidden;
+}
+
+
+#profile-details-section .datebox {
+	margin-top: -7px;
+}
+
 
 /*
 ** Exceptions for inside pages <--
@@ -472,6 +620,16 @@ body.home-page .mcol li:first-child {
 body.home-page .mcol li:last-child {
 	padding-bottom: 10px;
 }
+body.xprofile .padder {
+	background: url(images/profile_back.png) center top repeat-y;
+	overflow: auto;
+	width: 1000px;
+	position: relative;
+	left: -20px;
+}
+
+
+
 /*
 .li_container .article:hover {
 	background-color:#fcff79;
@@ -577,7 +735,8 @@ body.page #main-inner .article {
 	padding: 0;
 }
 #main-inner .article h1,
-#members-directory-form h3 {
+#members-directory-form h3,
+#register-page h2 {
 	padding: 20px 0 10px;
 	font: bold 2.3em/1em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
 	color: white;
@@ -1029,9 +1188,10 @@ ul.children li{
 	border:solid 10px #fcff79;
 }
 .submit {
-	height:49px;
+	/*	height:49px;
 	border-top:solid 1px #e7e7e7;
 	clear:both;
+	*/
 }
 #uit {
 	border-top:solid 1px #e7e7e7;
@@ -1394,7 +1554,25 @@ body.directory .padder {
 	position: absolute;
 	right: 0;
 	top: 0;
-	margin: 15px;
+	margin: 17px 15px 0;
+	width: 260px;
+}
+#members-dir-search label input {
+	width: 160px !important;
+}
+
+#members_search_submit {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 1px #FF6B71 solid;
+	width: auto;
+	background: #FB9A91;
+	padding: 7px 10PX 8PX;
+	font: 1.05em/.75em "Neuton", Georgia, "Times New Roman", Times, serif;
+	color: white;
+	text-transform: uppercase;
+	margin: 15px;	
 }
 ul.item-list {
 	width: 605px !important;
@@ -1419,9 +1597,248 @@ ul.item-list li .item-meta {
 	padding-top: 10px;
 	font-style: italic;
 }
-ul.item-list li .item-meta .activity {
+ul.item-list li .item-meta .activity,
+div#item-header span.activity {
 	background: none;
 	border-radius: 0;
 	border: none;
 	padding: 0;
+	font: italic .9em/1.1em "Neuton", Georgia, "Times New Roman", Times, serif;
+	color: #665942;
+}
+ul.item-list span.activity,
+div#item-header span.activity {
+	font-size: 100%;
+	opacity: 1 !important;
+	padding: 0;
+}
+ul.item-list li:nth-of-type(even) div.item-title a {
+	color: #7BB9BA;
+}
+ul.item-list li:nth-of-type(odd) div.item-title a {
+	color: #D87264;
+}
+ul.item-list li:nth-of-type(even) {
+	background: #f6f3e3;
+}
+.padder div.pagination {
+	background: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 605px;
+	padding: 20px !important;
+}
+
+
+
+.padder div.pagination .pag-count {
+	font: 1.4em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	color: #665942;
+}
+
+/*
+** profile
+*/
+
+body.profile #user-side {
+	width: 340px;
+	position: absolute;
+	overflow: hidden;
+}
+div#item-header {
+	margin: 20px 10px 0 40px;
+	background: #fbf9d5;
+	padding: 15px 30px 5px 15px;
+}
+#item-header-avatar img {
+	width: 125px;
+	height: 125px;
+}
+#item-header-content {
+	clear: both;
+}
+#item-header-content h2 {
+	font: bold 3.4em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	text-transform: capitalize;
+	letter-spacing: .025em;
+}
+#item-header-content h2 a {
+	color: #D87264 !important;
+}
+#item-header-content .user-nicename {
+	display: block;
+	font: italic 1.5em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	color: #7BB9BA;
+}
+div#item-header span.activity {
+	font-size: 1.3em !important;
+}
+div#item-header div#item-meta {
+	display: none;
+}
+
+body.profile #item-body {
+	width: 665px;
+	display: inline-block;
+	background: #fff;
+	float: right;
+	min-height: 600px;
+	margin-bottom: 20px;
+	position: relative;
+	padding: 5px;
+	margin-top: 65px;
+}
+div#item-header div#item-header-content {
+	margin-left: 0 !important;
+}
+#user-side #item-nav {
+	position: relative;
+	z-index: 10;
+}
+div.item-list-tabs {
+	clear: none !important;
+	margin: 0 !important;
+	background: #84765E !important;
+}
+div.item-list-tabs ul {
+	font: bold 1.2em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif !important;
+	text-transform: uppercase;
+	letter-spacing: .075em;
+	width: 140px;
+	padding: 50px 0;
+}
+div.item-list-tabs ul li:first-child {
+	margin-left: 0 !important;
+}
+div.item-list-tabs ul li {
+	float: none !important;
+	margin: 0 !important;
+}
+div.item-list-tabs ul li a {
+	color: #665942 !important;
+}
+div.item-list-tabs ul li.selected a,
+div.item-list-tabs ul li.current a {
+	background: #fff !important;
+	border-radius: 0 !important;
+}
+
+#object-nav ul li a {
+	padding: 5px 0 5px 55px;
+}
+div.item-list-tabs#subnav {
+	width: 200px;
+	float: left;
+	position: relative;
+	z-index: 10;
+	top: 160px;
+}
+#item-body #subnav {
+	position: relative;
+	z-index: 20;
+	top: 297px;
+	left: -125px;
+	background: #efeecd !important;
+	width: 150px;
+}
+#item-body #subnav .item-list-tabs {
+}
+#item-body #subnav ul {
+	font-weight: normal !important;
+	font-style: italic !important;
+}
+#item-body #subnav ul li.selected a, 
+#item-body #subnav ul li.current a {
+	background: #fff !important;
+	font-weight: normal;
+}
+
+div.profile {
+	width: 100%;
+}
+div.profile h4 {
+	position: absolute;
+	display: none;
+}
+
+div.profile table {
+	position: absolute;
+	width: 665px;
+}
+div.profile table tr td.label {
+	font: italic 1.23em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	letter-spacing: .065em;
+	color: #665942;
+}
+
+div.profile table tr td.label {
+	border: 0;
+	font-weight: normal !important;
+	width: 295px;
+	padding-left: 55px;
+}
+div.profile table tr td {
+	padding: 10px 0;
+}
+div.profile table tr.field_nomename td {
+	padding-top: 30px !important;	
+}
+table tr.alt td {
+	background: #f6f0dc !important;
+}
+div.profile table tr td.data {
+	font: 1.3em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	font-weight: 400;
+	color: #665942;
+}
+div.profile table tr td.data a {
+	text-decoration: none;
+	color: #665942;
+}
+#signup_form .create {
+	position: absolute;
+	top: 55px;
+	right: 20px;
+	width: 400px;
+	background: #fbf9d5;
+	padding: 0 20px 20px 60px;
+}
+#signup_form .create h2 {
+	text-align: right;
+	color: #D87264;
+}
+#signup_form .create p {
+	font: italic 1.4em/1.2em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	color: #665942;
+	text-align: right;
+	float: right;	
+}
+body.profile-edit #item-body {
+	min-height: 1105px;
+}
+body.profile-edit .button-nav {
+	height: 30px;
+}
+
+body.profile-edit form#profile-edit-form {
+	position: absolute;
+	overflow: hidden;
+	width: 615px;
+	right: 10px;
+	top: 10px;
+}
+body.profile-edit form#profile-edit-form .editfield {
+	width: 440px;
+}
+body.profile-edit form#profile-edit-form .field_sessogender label {
+	padding: 3px 0;
+}
+body.profile-edit form#profile-edit-form .submit {
+	text-align: right;
+}
+body.profile-edit form#profile-edit-form .submit input {
+	margin-right: 10px;
+}
+body.profile-edit form#profile-edit-form .editfield .clear-value {
+	display: none;
 }
