@@ -598,11 +598,6 @@ body.register #content {
 	margin-bottom:15px;
 	border:0 none !important;
 }
-/*
-#main .article:hover {
-	background-color:#fcff79;
-}
-*/
 body.home-page .mcol {
 	background: #fff;
 	width: 310px !important;
@@ -627,14 +622,6 @@ body.xprofile .padder {
 	position: relative;
 	left: -20px;
 }
-
-
-
-/*
-.li_container .article:hover {
-	background-color:#fcff79;
-}
-*/
 .article h2 {
 	font: 2em/1.2em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
 	margin-bottom: 15px;
@@ -932,7 +919,6 @@ body.page #main-inner .article {
 	position: relative;
 	right: 15px;
 	line-height: 17px;
-	
 }
 #header #sidebar li.widget_autoconnect_premium h2 {
 	display: none;
@@ -989,7 +975,6 @@ body.page #main-inner .article {
 	text-decoration: none;
 	color: #665942;
 }
-
 #sidebar {
 	width: 645px;
 	float: right;
@@ -1047,7 +1032,6 @@ li.comment {
 .reply {
 	margin-top: 5px;
 }
-
 .commentmetadata {
 	color:#929292;
 	font-size:10px;
@@ -1188,10 +1172,6 @@ ul.children li{
 	border:solid 10px #fcff79;
 }
 .submit {
-	/*	height:49px;
-	border-top:solid 1px #e7e7e7;
-	clear:both;
-	*/
 }
 #uit {
 	border-top:solid 1px #e7e7e7;
@@ -1461,9 +1441,6 @@ blockquote.right {
 
 
 
-
-
-
 /* OVERWRITE STYLES */
 
 /*
@@ -1525,6 +1502,7 @@ table.em-calendar tr.days-names td {
 	color: #cb4145;
 }
 
+
 /*
 ** map
 */
@@ -1532,6 +1510,7 @@ table.em-calendar tr.days-names td {
 .em-location-map {
 	width: 605px !important;
 }
+
 
 /*
 ** budypress
@@ -1628,13 +1607,11 @@ ul.item-list li:nth-of-type(even) {
 	width: 605px;
 	padding: 20px !important;
 }
-
-
-
 .padder div.pagination .pag-count {
 	font: 1.4em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
 	color: #665942;
 }
+
 
 /*
 ** profile
@@ -1676,7 +1653,6 @@ div#item-header span.activity {
 div#item-header div#item-meta {
 	display: none;
 }
-
 body.profile #item-body {
 	width: 665px;
 	display: inline-block;
@@ -1734,7 +1710,7 @@ div.item-list-tabs#subnav {
 	top: 160px;
 }
 #item-body #subnav {
-	position: relative;
+	position: absolute;
 	z-index: 20;
 	top: 297px;
 	left: -125px;
@@ -1843,6 +1819,24 @@ body.profile-edit form#profile-edit-form .editfield .clear-value {
 	display: none;
 }
 
+
+/*
+** change avatar
+*/
+
+body.change-avatar div.profile {
+	margin: 30px 15px 0 55px;
+	width: auto;
+	font: 1.3em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	font-weight: 400;
+	color: #665942;
+}
+body.change-avatar div.profile p {
+	padding-bottom: 15px;
+}
+body.change-avatar div.profile form input + p {
+	color: #7BB9BA;
+}
 
 /*
 ** fb button
