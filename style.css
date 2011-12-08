@@ -525,7 +525,11 @@ body.register #content {
 .submit button,
 .submit a.button,
 */
-.submit input[type="submit"]
+.submit,
+.submit input[type="submit"],
+.em-booking-submit,
+input#upload,
+a[title="Delete Avatar"]
 /*
 .submit input[type="button"],
 .submit input[type="reset"],
@@ -533,26 +537,24 @@ body.register #content {
 .submit div.generic-button a,
 .comment-reply-link
 */
- {
-	background: #e99a91;
-	border-radius: 12px 12px 12px 12px;
+{
+	/*background: #e99a91;*/
+	background: #FB9A91 !important;
+	border-radius: 6px !important;
 	cursor: pointer;
-	/*font: 12px/14px Arial,Tahoma,Verdana,sans-serif;*/
-	font: 1.7em/1.1em bold "Neuton",Georgia,"Times New Roman",Times,serif;
-	color: white;
-	padding: 15px 15px;
-	text-align: center;
-	text-decoration: none;
-	border: none;
+	font: 1.1em/1.1em bold "Neuton",Georgia,"Times New Roman",Times,serif !important;
+	color: white !important;
+	padding: 8px 16px 10px !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	border: 1px #FF6B71 solid !important;
 }
-.submit {
-	/*
-	margin-bottom: 30px;
-	border-top: 0 !important;
-	position: relative;
-	bottom: 68px;
-	*/
+.submit:hover,
+.em-booking-submit:hover {
+	color: #cb4145 !important;
 }
+
+
 .standard-form label, .standard-form span.label {
 	margin: 0 !important;
 	padding: 15px 0 5px 0;
@@ -1506,17 +1508,12 @@ table.em-calendar tr.days-names td {
 .em-booking-buttons {
 	width: 100% !important;
 	text-align: center;
+	height: auto !important;
+	padding-top: 15px;
 }
 .em-booking-buttons #em-booking-submit {
-	border: 1px #FF6B71 solid;
 	width: 100%;
-	background: #FB9A91;
-	padding: 10px 0;
-	font: 1.4em/1em "Neuton", Georgia, "Times New Roman", Times, serif;
-	color: #FFF8F1;
-}
-.em-booking-buttons #em-booking-submit:hover {
-	color: #cb4145;
+	font-size: 1.5em !important;
 }
 
 
@@ -1852,9 +1849,21 @@ body.change-avatar div.profile p {
 	padding-bottom: 15px;
 }
 body.change-avatar div.profile form input + p {
-	color: #7BB9BA;
+	color: #00A7B1;
+	padding-bottom: 25px;
 }
-
+body.change-avatar div.profile form #avatar-upload {
+	background: #F6F0DC;
+	padding: 15px;
+	margin-bottom: 22px;
+}
+body.change-avatar div.profile form a[title="Delete Avatar"] {
+	background: #433f3a !important;
+	border-color: #000 !important;
+}
+body.change-avatar div.profile form p:last-child {
+	margin-top: 15px;
+}
 
 /*
 ** fb button
