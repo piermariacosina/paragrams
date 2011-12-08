@@ -1842,3 +1842,32 @@ body.profile-edit form#profile-edit-form .submit input {
 body.profile-edit form#profile-edit-form .editfield .clear-value {
 	display: none;
 }
+
+
+/*
+** fb button
+*/
+
+.fbLoginButton {
+	position: absolute;
+	top: 21px;
+	left: -138px;
+}
+.fb_button .fb_button_text,
+.fb_button_rtl .fb_button_text {
+	border: 0 !important;
+	margin: 0 !important;
+	font-size: 12px !important;
+	font-weight: normal !important;
+}
+.fb_button_large .fb_button_text {
+	padding: 3px 6px 3px 6px !important;
+}
+.fb_button_large,
+.fb_button_large_rtl {
+	background-position: -1px -139px !important;
+}
+.fb_button,
+.fb_button_rtl {
+	padding: 0 !important;
+}

@@ -20,6 +20,8 @@
 
 			<?php if ( 'request-details' == bp_get_current_signup_step() ) : ?>
 
+
+				<div class="create">
 				<h2><?php _e( 'Create an Account', 'buddypress' ) ?></h2>
 
 				<?php do_action( 'template_notices' ) ?>
@@ -27,6 +29,10 @@
 				<p><?php _e( 'Registering for this site is easy, just fill in the fields below and we\'ll get a new account set up for you in no time.', 'buddypress' ) ?></p>
 
 				<?php do_action( 'bp_before_account_details_fields' ) ?>
+				</div>
+				
+				
+				
 
 				<div class="register-section" id="basic-details-section">
 
