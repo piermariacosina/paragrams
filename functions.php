@@ -35,6 +35,12 @@ function custom_menu(){
 	echo '</ul>';
 }
 
+function user_domain(){
+	global $bp;
+			$bp_user_link = $bp->loggedin_user->domain;
+			return $bp_user_link;
+}
+
 // =====================================
 // = WP 3.0+ Custom Background Support =
 // =====================================
