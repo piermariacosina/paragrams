@@ -714,6 +714,23 @@ body.xprofile .padder {
 
 
 
+body.page-template-default #main-inner {
+	background: #ebe5c9;
+	padding: 30px 0;
+}
+body.page-template-default #main-inner .article {
+	background: #fff !important;
+	position: relative;
+	margin: 30px 0 30px -20px;
+	width: 890px !important;
+	padding: 30px 20px 20px 50px !important;
+}
+body.page-template-default #main-inner .article h1 {
+	color: #e66b5f;
+}
+
+
+
 #main-inner {
 }
 body.page #main-inner .article {
@@ -1654,7 +1671,7 @@ div#item-header div#item-meta {
 	display: none;
 }
 body.profile #item-body {
-	width: 665px;
+	width: 675px;
 	display: inline-block;
 	background: #fff;
 	float: right;
@@ -1837,6 +1854,7 @@ body.change-avatar div.profile p {
 body.change-avatar div.profile form input + p {
 	color: #7BB9BA;
 }
+
 
 /*
 ** fb button
