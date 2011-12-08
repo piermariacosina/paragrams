@@ -529,7 +529,8 @@ body.register #content {
 .submit input[type="submit"],
 .em-booking-submit,
 input#upload,
-a[title="Delete Avatar"]
+a[title="Delete Avatar"],
+input#avatar-crop-submit
 /*
 .submit input[type="button"],
 .submit input[type="reset"],
@@ -1864,6 +1865,28 @@ body.change-avatar div.profile form a[title="Delete Avatar"] {
 body.change-avatar div.profile form p:last-child {
 	margin-top: 15px;
 }
+body.change-avatar div.profile form h5 {
+	font: 1em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	text-transform: uppercase;
+	padding: 5px 0 10px;
+}
+
+
+/*
+** messages - error, update
+*/
+
+div#message.updated p,
+div#message.error p {
+	border: none !important;
+	font: bold 1.2em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif !important;
+	text-transform: uppercase;
+}
+span.activity, div#message p {
+	border-radius: 0 !important;
+	background-image: none !important;
+}
+
 
 /*
 ** fb button
