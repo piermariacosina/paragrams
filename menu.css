@@ -37,8 +37,8 @@ position:relative;
 	cursor: pointer;
 }
 #top-menu li li a:hover {
-	background:		#000;
-	color:			#FFF;
+	background:	#000;
+	color: #FFF;
 }
 #top-menu a span {
 	float:right;

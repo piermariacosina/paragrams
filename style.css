@@ -493,8 +493,7 @@ body.register #content {
 	letter-spacing: 0.025em;
 	margin-bottom: 15px;
 	letter-spacing: .025em;
-	color: #00A7B1;
-	
+	color: #00A7B1;	
 }
 #profile-details-section h4 {
 	padding-top: 108px;
@@ -504,7 +503,8 @@ body.register #content {
 }
 
 
-.editfield label, .register-section label, .editfield .radio span {
+.editfield label, .register-section label, .editfield .radio span,
+#send_message_form label {
 	font: 1.2em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
 	letter-spacing: 0.06em;
 	color: #665942;
@@ -1681,6 +1681,43 @@ div#item-meta #send-private-message {
 div#item-meta #send-private-message a {
 	display: inline-block;
 }
+body.messages form#send_message_form {
+	margin: 0 15px 0 55px;
+}
+body.messages form#send_message_form li .send-to-input {
+	width: 189px !important;
+}
+body.messages form#send_message_form input#subject {
+	width: 391px !important;
+}
+body.messages form#send_message_form textarea#message_content {
+}
+body.messages form#send_message_form div.submit {
+	background: none !important;
+	border: 0 !important;
+	cursor: default;
+	text-align: left !important;
+	padding: 0 !important;
+	margin: 25px 0;
+}
+body.messages form#send_message_form {
+	font: 400 1.2em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif;
+	color: #665942;
+}
+body.messages form#send_message_form #send-notice {
+	margin-right: 10px;
+}
+#send_message_form label {
+	font-size: 1em;
+}
+body.messages label[for="subject"] {
+	margin-top: 8px !important;
+}
+body.messages label[for="content"] {
+	margin-top: 10px !important;
+}
+
+
 #item-body {
 	width: 675px;
 	display: inline-block;
