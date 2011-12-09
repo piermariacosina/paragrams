@@ -324,7 +324,8 @@ if (!function_exists('load_my_scripts')) {
     	global $wp_query;
     	if (!is_admin()) {
     	$p = $wp_query->get_queried_object();
-		wp_enqueue_script('dialog-theme-script', get_bloginfo('template_url').'/js/jquery-ui-1.8.16.custom.min.js', array('jquery'), '1.8.16', false );
+    	if( defined(BP_GALLERY_PLUGIN_URL) ) wp_dequeue_script('jqueryui');
+		wp_enqueue_script('dialog-theme-script', get_bloginfo('template_url').'/js/jquery-ui.custom.min.js', array('jquery'), '1.8.162', false );
 		wp_enqueue_script('booking-event-theme-script', get_bloginfo('template_url').'/js/js.js', array('jquery'), '0.1', false );
 		wp_localize_script( 'booking-event-theme-script', 'Siteinfo', array( 'slug'=>$p->post_name,'site_url' => get_bloginfo('template_url') ) );
 
