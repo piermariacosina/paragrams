@@ -1,5 +1,6 @@
 <?php
 	global $wpdb, $current_user, $EM_Notices;
+
 	include_once(EM_DIR.'/admin/em-bookings.php');
 	include_once(EM_DIR.'/admin/em-admin.php');
 	include_once(EM_DIR.'/admin/bookings/em-cancelled.php');

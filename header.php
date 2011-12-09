@@ -43,6 +43,7 @@
         		<a href="<?php bloginfo("url"); ?>/">
 				<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" /></a>
         	</div>
+        	<div id="flag"></div>
         	<?php get_sidebar(); ?>
         	<div id="twitter_abstract">
         		<?php 
