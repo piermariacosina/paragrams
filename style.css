@@ -1594,20 +1594,16 @@ ul.item-list li .item-meta {
 }
 ul.item-list li .item-meta .activity,
 div#item-header span.activity,
-div#message-thread div.message-box strong .activity {
+div#message-thread div.message-box strong .activity,
+body.messages .messages table#message-threads tr td.thread-from .activity {
 	background: none;
 	border-radius: 0;
 	border: none;
 	padding: 0;
 	font: italic .9em/1.1em "Neuton", Georgia, "Times New Roman", Times, serif;
 	color: #665942;
-}
-ul.item-list span.activity,
-div#item-header span.activity,
-div#message-thread div.message-box strong .activity {
 	font-size: 100%;
 	opacity: 1 !important;
-	padding: 0;
 }
 ul.item-list li:nth-of-type(even) div.item-title a {
 	color: #7BB9BA;
@@ -1684,7 +1680,8 @@ div#item-meta #send-private-message a {
 	display: inline-block;
 }
 body.messages form#send_message_form,
-body.messages #message-thread {
+body.messages #message-thread,
+body.messages .messages  {
 	margin: 0 20px 0 55px;
 	font: 400 1.2em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif;
 	color: #665942;
@@ -1740,6 +1737,91 @@ div#message-thread div.message-content {
 	font-size: 1.1em;
 	line-height: 1.2em;
 }
+body.messages .messages .pagination {
+	padding: 20px 0 20px !important;
+}
+
+body.messages .messages div.messages-options-nav {
+	background: #ece5c9 !important;
+	margin: 20px 0 !important;
+	padding: 15px !important;
+	font-size: 1.3em;
+	font-size: 1.1em;
+	font-style: italic;
+	text-transform: lowercase;
+}
+body.messages .messages div.messages-options-nav select {
+	margin-right: 5px;
+}
+body.messages .messages div.messages-options-nav a {
+	font-style: normal;
+	text-decoration: none;
+}
+body.messages .messages div.messages-options-nav a:before {
+	content: '\2192\00a0\00a0\00a0\00a0';
+}
+body.messages .messages table#message-threads {
+	margin: 0 !important;
+	font-size: 1.1em;
+}
+body.messages .messages table#message-threads .thread-count {
+	display: none;
+}
+body.messages .messages table#message-threads tr td {
+	padding: 10px 0 !important;
+	vertical-align: top;
+}
+body.messages .messages table#message-threads tr td img,
+body.messages .messages table#message-threads tr td.thread-from,
+body.messages .messages table#message-threads tr td.thread-info {
+	padding-right: 15px !important;
+}
+body.messages .messages table#message-threads tr td.thread-from {
+	text-transform: lowercase;
+	font-style: italic;
+}
+body.messages .messages table#message-threads tr td.thread-from a,
+body.messages .messages table#message-threads tr td.thread-info p a {
+	font: .9em/1em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif !important;
+	letter-spacing: .025em;
+	text-transform: capitalize;
+	text-decoration: none;
+	padding-right: 2px;
+}
+body.messages .messages table#message-threads tr td.thread-from .activity {
+	color: #A69473;
+}
+body.messages .messages table#message-threads tr td.thread-info p a {
+	position: relative;
+	top: 2px;
+	font-weight: bold !important;
+}
+body.messages .messages table#message-threads tr td.thread-info p.thread-excerpt {
+	font-size: 100% !important;
+	padding-top: 1px;
+	line-height: 1.3em;
+	color: #665942;	
+}
+body.messages .messages table#message-threads tr td.thread-options a {
+	width: 35px !important;
+	height: 36px !important;
+	background: url('images/doc_delete_icon&24.png') no-repeat 50% 50%;
+	border: 0 !important;
+	border-radius: 6px !important;
+	overflow: hidden;
+	text-indent: -9999px;
+	display: inline-block;
+	padding: 0 !important;
+	margin-top: -15px !important;
+	position: relative;
+	top: -12px;
+}
+body.messages .messages table#message-threads tr td.thread-options a:hover {
+	background-color: #ee6869;
+}
+body.messages .messages table#message-threads tr td.thread-options input {
+	margin: 25px 5px 0 10px !important;
+}
 
 
 
@@ -1787,6 +1869,9 @@ body.xprofile .familiarirelatives div[class*="email"] {
 body.xprofile .familiarirelatives div[class*="email"] {
 	margin-bottom: 30px;
 }
+
+
+
 
 
 #item-body {
@@ -1839,28 +1924,24 @@ div.item-list-tabs ul li.current a {
 	padding: 5px 0 5px 55px;
 }
 div.item-list-tabs#subnav {
-	width: 200px;
 	float: left;
-	position: relative;
-	z-index: 10;
-	top: 160px;
-}
-#item-body #subnav {
 	position: absolute;
 	z-index: 20;
-	top: 297px;
-	left: -125px;
+	top: 0;
+	right: 0;
 	background: #efeecd !important;
 	width: 150px;
 }
-#item-body #subnav .item-list-tabs {
+#subnav {
 }
-#item-body #subnav ul {
+#subnav .item-list-tabs {
+}
+#subnav ul {
 	font-weight: normal !important;
 	font-style: italic !important;
 }
-#item-body #subnav ul li.selected a, 
-#item-body #subnav ul li.current a {
+#subnav ul li.selected a, 
+#subnav ul li.current a {
 	background: #fff !important;
 	font-weight: normal;
 }
