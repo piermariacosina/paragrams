@@ -530,7 +530,8 @@ body.register #content {
 .em-booking-submit,
 input#upload,
 a[title="Delete Avatar"],
-input#avatar-crop-submit
+input#avatar-crop-submit,
+div#send-private-message a
 /*
 .submit input[type="button"],
 .submit input[type="reset"],
@@ -618,7 +619,8 @@ body.home-page .mcol li:first-child {
 body.home-page .mcol li:last-child {
 	padding-bottom: 10px;
 }
-body.xprofile .padder {
+body.xprofile .padder,
+body.messages .padder {
 	background: url(images/profile_back.png) center top repeat-y;
 	overflow: auto;
 	width: 1000px;
@@ -713,6 +715,23 @@ body.xprofile .padder {
 	background-repeat: no-repeat;
 	background-position: left 21px;
 	padding-left:25px;
+}
+
+
+
+body.page-template-default #main-inner {
+	background: #ebe5c9;
+	padding: 30px 0;
+}
+body.page-template-default #main-inner .article {
+	background: #fff !important;
+	position: relative;
+	margin: 30px 0 30px -20px;
+	width: 890px !important;
+	padding: 30px 20px 20px 50px !important;
+}
+body.page-template-default #main-inner .article h1 {
+	color: #e66b5f;
 }
 
 
@@ -1549,7 +1568,6 @@ body.directory .padder {
 	font: 1.05em/.75em "Neuton", Georgia, "Times New Roman", Times, serif;
 	color: white;
 	text-transform: uppercase;
-	margin: 15px;	
 }
 ul.item-list {
 	width: 605px !important;
@@ -1598,6 +1616,9 @@ ul.item-list li:nth-of-type(odd) div.item-title a {
 ul.item-list li:nth-of-type(even) {
 	background: #f6f3e3;
 }
+ul.item-list li:last-child {
+	border: 0 !important;
+}
 .padder div.pagination {
 	background: none !important;
 	margin: 0 !important;
@@ -1615,7 +1636,7 @@ ul.item-list li:nth-of-type(even) {
 ** profile
 */
 
-body.profile #user-side {
+#user-side {
 	width: 340px;
 	position: absolute;
 	overflow: hidden;
@@ -1649,10 +1670,19 @@ div#item-header span.activity {
 	font-size: 1.3em !important;
 }
 div#item-header div#item-meta {
-	display: none;
+	padding: 0 !important;
+	overflow: visible !important;
+	margin: 0 0 15px 0 !important;
 }
-body.profile #item-body {
-	width: 665px;
+div#item-meta #send-private-message {
+	margin: 0 !important;
+	float: none !important;
+}
+div#item-meta #send-private-message a {
+	display: inline-block;
+}
+#item-body {
+	width: 675px;
 	display: inline-block;
 	background: #fff;
 	float: right;
@@ -1869,6 +1899,7 @@ span.activity, div#message p {
 	border-radius: 0 !important;
 	background-image: none !important;
 }
+
 
 /*
 ** fb button
