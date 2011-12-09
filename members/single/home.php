@@ -33,7 +33,6 @@
 					</ul>
 				</div>
 				<!-- Added to have the subnav in the same div of the parent nav-->
-				<?php if ( bp_is_my_profile() ) : ?>
 				
 					<div class="item-list-tabs no-ajax" id="subnav" role="navigation">
 						<ul>
@@ -42,8 +41,6 @@
 				
 						</ul>
 					</div>
-				
-				<?php endif; ?>
 			</div><!-- #item-nav -->
 			</div>
 			<div id="item-body">
