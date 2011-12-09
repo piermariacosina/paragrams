@@ -32,6 +32,17 @@
 
 					</ul>
 				</div>
+				<?php if ( bp_is_my_profile() ) : ?>
+				
+					<div class="item-list-tabs no-ajax" id="subnav" role="navigation">
+						<ul>
+				
+							<?php bp_get_options_nav(); ?>
+				
+						</ul>
+					</div>
+				
+				<?php endif; ?>
 			</div><!-- #item-nav -->
 			</div>
 			<div id="item-body">
