@@ -1593,7 +1593,8 @@ ul.item-list li .item-meta {
 	font-style: italic;
 }
 ul.item-list li .item-meta .activity,
-div#item-header span.activity {
+div#item-header span.activity,
+div#message-thread div.message-box strong .activity {
 	background: none;
 	border-radius: 0;
 	border: none;
@@ -1602,7 +1603,8 @@ div#item-header span.activity {
 	color: #665942;
 }
 ul.item-list span.activity,
-div#item-header span.activity {
+div#item-header span.activity,
+div#message-thread div.message-box strong .activity {
 	font-size: 100%;
 	opacity: 1 !important;
 	padding: 0;
@@ -1681,8 +1683,11 @@ div#item-meta #send-private-message {
 div#item-meta #send-private-message a {
 	display: inline-block;
 }
-body.messages form#send_message_form {
-	margin: 0 15px 0 55px;
+body.messages form#send_message_form,
+body.messages #message-thread {
+	margin: 0 20px 0 55px;
+	font: 400 1.2em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif;
+	color: #665942;
 }
 body.messages form#send_message_form li .send-to-input {
 	width: 189px !important;
@@ -1692,7 +1697,9 @@ body.messages form#send_message_form input#subject {
 }
 body.messages form#send_message_form textarea#message_content {
 }
-body.messages form#send_message_form div.submit {
+body.messages form#send_message_form div.submit,
+body.messages form#send-reply div.submit,
+body.xprofile .familiarirelatives div.submit {
 	background: none !important;
 	border: 0 !important;
 	cursor: default;
@@ -1715,6 +1722,68 @@ body.messages label[for="subject"] {
 }
 body.messages label[for="content"] {
 	margin-top: 10px !important;
+}
+div#message-thread {
+	margin-top: 25px !important;	
+}
+div#message-thread h3 {
+	font: 2em/1.2em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
+	margin-bottom: 15px;
+	letter-spacing: .025em;
+	color: #00A7B1;
+}
+div#message-thread #message-recipients .highlight {
+	font: italic 1em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	color: #84765d;
+}
+div#message-thread div.message-content {
+	font-size: 1.1em;
+	line-height: 1.2em;
+}
+
+
+div#message-thread div.message-box {
+	margin: 0 0 35px 0 !important;
+	padding: 0 !important;
+}
+div#message-thread div.message-box strong a {
+	font: bold .8em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif !important;
+	text-transform: uppercase;
+	letter-spacing: .1em;	
+}
+div#message-thread div.message-box strong .activity {
+	font-size: .9em;
+	text-transform: lowercase;
+	border-left: 1px solid #333;
+	padding-left: 15px;
+}
+div#message-thread div.message-box .avatar-box strong {
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+body.xprofile .familiarirelatives div.clear + div.editfield p {
+	position: absolute;
+	top: -80px;
+	margin-right: 10px;
+}
+body.xprofile .familiarirelatives ul.button-nav {
+	position: absolute;
+	top: -120px;
+}
+body.xprofile .familiarirelatives {
+	margin-top: 100px;
+	overflow: visible !important;
+}
+body.xprofile .familiarirelatives div[class*="tel"],
+body.xprofile .familiarirelatives div[class*="email"] {
+	width: 222px !important;
+	margin-right: 222px;
+	white-space: nowrap;
+}
+body.xprofile .familiarirelatives div[class*="email"] {
+	margin-bottom: 30px;
 }
 
 
