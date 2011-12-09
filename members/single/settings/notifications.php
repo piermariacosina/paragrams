@@ -37,7 +37,7 @@
 
 				<?php do_action( 'bp_before_member_body' ); ?>
 
-				<div class="item-list-tabs no-ajax" id="subnav">
+				<!--<div class="item-list-tabs no-ajax" id="subnav">
 					<ul>
 
 						<?php bp_get_options_nav(); ?>
