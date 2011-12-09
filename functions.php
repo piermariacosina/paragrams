@@ -355,6 +355,8 @@ function booking_helper_overrideBooking( $paypal_vars, $EM_Booking, $obj )
 {
 	$donate = ( $_REQUEST['donate'] ) ? $_REQUEST['donate'] : 0;
 	
+	$commssion = 3.5;
+	
 	$paypal_vars['donate'] = $donate;
 	
 	$count = count($EM_Booking->tickets_bookings->tickets_bookings);
@@ -364,6 +366,7 @@ function booking_helper_overrideBooking( $paypal_vars, $EM_Booking, $obj )
 		for( $i=1; $i <= $count; $i++ )
 		{
 		 	$paypal_vars['amount_'.$i] = $paypal_vars['amount_'.$i] + $paypal_vars['donate'];
+		 	$paypal_vars['amount_'.$i] = $paypal_vars['amount_'.$i] + ( $paypal_vars['amount_'.$i] / 100 ) * $commssion;
 		}
 	}
 	return $paypal_vars;
