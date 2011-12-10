@@ -373,4 +373,5 @@ function booking_helper_overrideBooking( $paypal_vars, $EM_Booking, $obj )
 	return $paypal_vars;
 }
 add_filter( 'em_gateway_paypal_get_paypal_vars', 'booking_helper_overrideBooking', 10, 3 );
+////sto facendo prova commit
 ?>
