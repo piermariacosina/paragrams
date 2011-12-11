@@ -29,6 +29,7 @@
     <script src="<?php bloginfo('template_url'); ?>/js/columnizer.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/columnize.js" type="text/javascript"></script>
 	<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/menu.js'></script>
+	<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/general.js'></script>
 	<!--<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/image_appear.js'></script>-->
 	<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/jquery.backstretch.min.js'></script>
 	<link type="text/css" href="/cometchat/cometchatcss.php" rel="stylesheet" charset="utf-8">

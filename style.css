@@ -12,6 +12,8 @@ License: GNU/GPL Version 2 or later. http://www.gnu.org/licenses/gpl.html
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400);
 @import url(http://fonts.googleapis.com/css?family=Neuton:300,400,400italic);
 
+@import url('explanation/how.css');
+
 body {
 	background: #f5f5f5;
 }
@@ -1463,7 +1465,7 @@ blockquote.right {
 
 
 
-/* OVERWRITE STYLES */
+/* OVERWRITE STYLES ************************************************/
 
 /*
 ** calendar
@@ -2116,4 +2118,45 @@ span.activity, div#message p {
 .fb_button,
 .fb_button_rtl {
 	padding: 0 !important;
+}
+
+
+
+/* SPECIAL STYLES **************************************************/
+
+/*
+** how it works - change for correct id (119 = local)
+*/
+
+body.page-id-119 #main-inner .article,
+body.page-id-123 #main-inner .article {
+	background: none !important;
+	width: 1000px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	left: -20px;
+	background: none !important;
+	overflow: visible !important;
+}
+body.page-id-119 #main-inner .article td,
+body.page-id-123 #main-inner .article td {
+	padding: 0 !important;
+}
+body.page-id-119 #main-inner .article table,
+body.page-id-123 #main-inner .article table {
+	margin: 0 !important;
+}
+body.page-id-119 #main-inner .article table tr td, body.page-id-119 #main-inner .article table tr th,
+body.page-id-123 #main-inner .article table tr td, body.page-id-123 #main-inner .article table tr th {
+	vertical-align: top;
+}
+body.page-id-119 #main-inner .article img,
+body.page-id-123 #main-inner .article img {
+	width: auto !important;
+	margin: 0 !important;
+}
+
+body.page-id-119 #main-inner .article a,
+body.page-id-123 #main-inner .article a {
+	text-decoration: none;
 }
