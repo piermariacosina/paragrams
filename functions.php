@@ -374,4 +374,16 @@ function booking_helper_overrideBooking( $paypal_vars, $EM_Booking, $obj )
 }
 add_filter( 'em_gateway_paypal_get_paypal_vars', 'booking_helper_overrideBooking', 10, 3 );
 ////sto facendo prova commit
+
+
+//can user write testimonial
+function testimonial_current_user_can_write_event($user_event_id){
+	global $bp;
+   $can_write=false;
+   $current_user_id = $bp->loggedin_user->id;
+    if(is_user_logged_in()&&!bp_is_my_profile()&&($current_user_id!=$user_event_id))
+        $can_write=true;
+    
+    return apply_filters('bp_testimonials_can_user_write',$can_write);
+}
 ?>
