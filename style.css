@@ -2029,6 +2029,7 @@ div.item-list-tabs#subnav {
 	width: 150px;
 	border: 0 !important;
 	margin: 0 !important;
+	min-height: 170px !important;
 }
 
 div.item-list-tabs#subnav .subshadow {

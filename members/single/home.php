@@ -31,6 +31,7 @@
 				</div>
 				<!-- Added to have the subnav in the same div of the parent nav-->
 					<div class="item-list-tabs no-ajax" id="subnav" role="navigation">
+						<div class="subshadow"></div>
 						<ul>
 							<?php bp_get_options_nav(); ?>
 							<?php do_action( 'bp_member_plugin_options_nav' ); ?>
