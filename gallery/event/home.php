@@ -1,9 +1,9 @@
-<div class="item-list-tabs no-ajax" id="subnav">
+<!--<div class="item-list-tabs no-ajax" id="subnav">
 <ul>
 	<?php bp_event_gallery_admin_tabs(); ?>
 </ul>
 <?php// gallery_display_space_usage()?>
-</div>
+</div>-->
 
 				<div id="galleries">
 				

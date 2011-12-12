@@ -1,10 +1,10 @@
-<div class="item-list-tabs no-ajax" id="subnav">
+<!--<div class="item-list-tabs no-ajax" id="subnav">
 <ul>
 	
 	<?php bp_user_gallery_admin_tabs();?>
 </ul>
 <?php global $bp; gallery_display_space_usage("user",$bp->displayed_user->id)?>
-</div>
+</div>-->
 <div class="gnav"><?php bp_gallery_bcomb();?>	</div>
 
 				<div id="galleries">

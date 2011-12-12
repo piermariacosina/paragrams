@@ -14,11 +14,9 @@
 		?>
    		<div class='em-location-map' id='em-location-map-<?php echo $rand ?>' style='background: #CDCDCD; width: <?php echo $width ?>px; height: <?php echo $height ?>px'><?php _e('Loading Map....', 'dbem'); ?></div>
    		<div class='em-location-map-info' id='em-location-map-info-<?php echo $rand ?>' style="display:none; visibility:hidden;">
-   			<!--
-   			remove the location baloon to avoid link to locations
    			<div class="em-map-balloon" style="font-size:12px;">
    				<div class="em-map-balloon-content" ><?php echo $EM_Location->output(get_option('dbem_location_baloon_format')); ?></div>
-   			</div>-->
+   			</div>
    		</div>
 		<div class='em-location-map-coords' id='em-location-map-coords-<?php echo $rand ?>' style="display:none; visibility:hidden;">
 			<span class="lat"><?php echo $EM_Location->latitude; ?></span>

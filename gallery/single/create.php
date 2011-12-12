@@ -17,15 +17,16 @@
 						<?php do_action( 'bp_members_directory_member_types' ) ?>
 					</ul>
 				</div>
-			</div>
-
-			<div id="item-body">
-
 				<div class="item-list-tabs no-ajax" id="subnav">
 					<ul>
 						<?php bp_get_options_nav() ?>
 					</ul>
 				</div>
+			</div>
+
+			<div id="item-body">
+
+				
 
 				<div class="bp-gallery">
 				<?php do_action( 'bp_before_gallery_edit_content' ) ?>

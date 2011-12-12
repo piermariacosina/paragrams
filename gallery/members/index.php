@@ -8,7 +8,7 @@
 			<div id="item-header">
 				<?php locate_template( array( 'members/single/member-header.php' ), true ) ?>
 			</div>
-
+			<div id="user-side">
 			<div id="item-nav">
 				<div class="item-list-tabs no-ajax" id="sub-nav">
 					<ul>
@@ -17,8 +17,15 @@
 						<?php do_action( 'bp_members_directory_member_types' ) ?>
 					</ul>
 				</div>
+				<div class="item-list-tabs no-ajax" id="subnav">
+					<ul>
+					<?php //bp_get_options_nav() ?>
+					<?php bp_user_gallery_admin_tabs();?>
+					</ul>
+					
+				</div>
 			</div>
-
+			</div>
 			<div id="item-body">
 			<?php
 			

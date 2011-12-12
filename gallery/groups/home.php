@@ -1,10 +1,10 @@
-<div class="item-list-tabs no-ajax" id="subnav">
+<!--<div class="item-list-tabs no-ajax" id="subnav">
    
 <ul>
 	<?php bp_group_gallery_admin_tabs(); ?>
 </ul>
 <?php gallery_display_space_usage("groups",null)?>
-</div>
+</div>-->
 
 				<div id="galleries">
 				

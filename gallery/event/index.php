@@ -15,8 +15,13 @@
 						<?php bp_get_options_nav() ?>
 					</ul>
 				</div>
+				<div class="item-list-tabs no-ajax" id="subnav">
+				<ul>
+				<?php bp_group_gallery_admin_tabs(); ?>
+				</ul>
+				</div>
 			</div><!-- /#item-nav -->
-
+			
 			<div id="item-body">
 						<?php do_action( 'template_notices' ) ?>
 
