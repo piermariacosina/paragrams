@@ -597,10 +597,12 @@ body.register #content {
 }
 
 
-.editfield label, .register-section label, .editfield .radio span,
-#send_message_form label {
+.editfield label,
+.register-section label,
+.editfield .radio span,
+#send_message_form label,
+body.settings #item-body h3 + form label {
 	font: 1.2em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
-	letter-spacing: 0.06em;
 	color: #665942;
 	text-transform: uppercase;	
 	letter-spacing: .07em;
@@ -651,7 +653,8 @@ div#send-private-message a
 }
 
 
-.standard-form label, .standard-form span.label {
+.standard-form label,
+.standard-form span.label {
 	margin: 0 !important;
 	padding: 15px 0 5px 0;
 	font-weight: 400 !important;
@@ -1281,12 +1284,10 @@ ul.children li{
 }
 #submit {
 	padding:0 10px;
-	background:none;
-	line-height:49px;
-	height:49px;
-	border:none;
-	font-size:12px;
-	cursor:pointer;
+	background: none;
+	border: none;
+	font-size: 12px;
+	cursor: pointer;
 }
 #submit:hover {
 	background-color:#fcff79;
@@ -1762,7 +1763,8 @@ div#item-meta #send-private-message a {
 }
 body.messages form#send_message_form,
 body.messages #message-thread,
-body.messages .messages  {
+body.messages .messages,
+body.settings #item-body h3 + form {
 	margin: 0 20px 0 55px;
 	font: 400 1.2em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif;
 	color: #665942;
@@ -1777,7 +1779,9 @@ body.messages form#send_message_form textarea#message_content {
 }
 body.messages form#send_message_form div.submit,
 body.messages form#send-reply div.submit,
-body.xprofile .familiarirelatives div.submit {
+body.xprofile .familiarirelatives div.submit,
+body.xprofile form#profile-edit-form div.submit,
+body.settings form div.submit {
 	background: none !important;
 	border: 0 !important;
 	cursor: default;
@@ -1904,8 +1908,7 @@ body.messages .messages table#message-threads tr td.thread-options input {
 	margin: 25px 5px 0 10px !important;
 }
 
-
-
+/* ** */
 
 div#message-thread div.message-box {
 	margin: 0 0 35px 0 !important;
@@ -1927,6 +1930,7 @@ div#message-thread div.message-box .avatar-box strong {
 	font-style: italic;
 }
 
+/* ** */
 
 body.xprofile .familiarirelatives div.clear + div.editfield p {
 	position: absolute;
@@ -1951,7 +1955,29 @@ body.xprofile .familiarirelatives div[class*="email"] {
 	margin-bottom: 30px;
 }
 
+/* ** */
 
+body.settings #item-body h3 + form label {
+	font-size: 1em;
+	margin: 6px 0 5px 0 !important;
+}
+body.settings #item-body h3 + form input#pwd,
+body.settings #item-body h3 + form input#email,
+body.settings #item-body h3 + form input#pass1,
+body.settings #item-body h3 + form input#pass2 {
+	clear: both;
+	float: none !important;
+	width: 431px !important;
+	margin-right: 134px !important;
+}
+body.settings #item-body h3 + form input#pass2 {
+	margin: 15px 0 6px;
+}
+body.settings #item-body h3 + form input#submit {
+	font-size: .95em !important;
+}
+
+/* ** */
 
 #item-body {
 	width: 675px;
