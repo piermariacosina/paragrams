@@ -2,8 +2,10 @@
 .filetto_sotto  {
 	background: url('filetto.png') no-repeat;
 	height: 10px;
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin: 100px 0;
+}
+.filetto_sotto {
+	margin: 50px 0;	
 }
 .col_container {
 	width: 100%;
@@ -11,18 +13,6 @@
 }
 .col_container a {
 	text-decoration: none;
-}
-.colonna_info_sx a:link, 
-.colonna_info_sx a:visited, 
-.colonna_info_sx a:hover, 
-.colonna_info_sx a:active {
-	color: #d57267;
-}
-.colonna_info_dx a:link, 
-.colonna_info_dx a:visited, 
-.colonna_info_dx a:hover, 
-.colonna_info_dx a:active {
-	color: #7db8b8;
 }
 .colonna_info_sx,
 .colonna_info_dx {
@@ -46,12 +36,39 @@
 	padding-bottom: 20px;
 	margin: 0;
 	list-style: none;
+	position: relative;
 }
 .colonna_info_sx li:nth-child(odd) {
 	background: url('sfumatura_sx.png') repeat-y;
 }
 .colonna_info_dx li:nth-child(even) {
 	background: url('sfumatura_dx.png') repeat-y;
+}
+
+
+.mappa_bt {
+	width: 71px;
+	height: 57px;
+	position: absolute;
+	top: 10px;
+	display: table;
+}
+.colonna_info_sx .mappa_bt {
+	background: url('bottone_mappa_red.png') no-repeat right top;
+	right: 68px;
+}
+.colonna_info_dx .mappa_bt {
+	background: url('bottone_mappa_blu.png') no-repeat right top;
+	right: 18px;
+}
+.mappa_bt a {
+	display: table-cell;
+	vertical-align: bottom;
+	font: italic 1.1em/.85em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-seri;
+	letter-spacing: 0.068em;
+	color: #F9F5E9 !important;
+	text-align: right;
+	padding: 0 13px 5px 0;
 }
 .colonna_info_sx h3, .colonna_info_dx h3 {
 	padding: 24px 0 40px;
@@ -60,13 +77,30 @@
 	font-family: "PT Sans Narrow", Arial, Helvetica, Geneva, sans-seri;
 	width: 174px;
 }
+.colonna_info_sx h3 br,
+.colonna_info_dx h3 br,
+div.faq br  {
+	display: none;
+}
+.colonna_info_sx h3 .eng,
+.colonna_info_dx h3 .eng {
+	font-size: 1.6em;
+	line-height: 0.9em;
+	letter-spacing: 0.05em;
+}
+.colonna_info_sx h3 .ita,
+.colonna_info_dx h3 .ita {
+	font-size: 1.3em;
+	letter-spacing: 0.05em;
+	line-height: 1em;
+}
 .colonna_info_sx h3 {
 	padding-left:25px;
-	color: #d57267;
+	color: #d57267 !important;
 }
 .colonna_info_dx h3 {
 	padding-left:75px;
-	color: #7db8b8;
+	color: #7db8b8 !important;
 }
 .colonna_info_sx p, .colonna_info_dx p {
 	width: 375px;
@@ -77,12 +111,12 @@
 .colonna_info_dx p {
 	padding-left: 75px;
 }
-.eng {
+div.faq .eng {
 	font-size: 1.4em;
 	line-height: 0.9em;
 	letter-spacing: 0.05em;
 }
-.ita {
+div.faq .ita {
 	font-size: 1.1em;
 	font-weight: normal;
 	letter-spacing: 0.05em;

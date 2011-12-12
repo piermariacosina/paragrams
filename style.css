@@ -723,7 +723,8 @@ body.home-page .mcol li:last-child {
 
 
 body.xprofile .padder,
-body.messages .padder {
+body.messages .padder,
+body.settings .padder {
 	background: url(images/profile_back.png) center top repeat-y;
 	overflow: auto;
 	width: 1000px;
@@ -1714,12 +1715,6 @@ ul.item-list li:last-child {
 ** profile
 */
 
-
-body.xprofile .padder {
-			
-}
-
-
 #user-side {
 	width: 340px;
 	position: absolute;
@@ -2031,7 +2026,6 @@ div.item-list-tabs#subnav {
 	margin: 0 !important;
 	min-height: 170px !important;
 }
-
 div.item-list-tabs#subnav .subshadow {
 	position: absolute;
 	top: 0;
@@ -2040,7 +2034,6 @@ div.item-list-tabs#subnav .subshadow {
 	height: 100%;
 	background: url('images/subshadow.png') no-repeat 0 50%;
 }
-
 #subnav ul {
 	font-weight: normal !important;
 	font-style: italic !important;
