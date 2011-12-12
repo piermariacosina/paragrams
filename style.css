@@ -719,6 +719,9 @@ body.home-page .mcol li:first-child {
 body.home-page .mcol li:last-child {
 	padding-bottom: 10px;
 }
+
+
+
 body.xprofile .padder,
 body.messages .padder {
 	background: url(images/profile_back.png) center top repeat-y;
@@ -1711,10 +1714,16 @@ ul.item-list li:last-child {
 ** profile
 */
 
+
+body.xprofile .padder {
+			
+}
+
+
 #user-side {
 	width: 340px;
 	position: absolute;
-	overflow: hidden;
+	overflow: visible;
 }
 div#item-header {
 	margin: 20px 10px 0 40px;
@@ -1949,10 +1958,8 @@ body.xprofile .familiarirelatives div[class*="email"] {
 
 
 
-
-
 #item-body {
-	width: 100%;
+	width: 675px;
 	display: inline-block;
 	background: #fff;
 	float: right;
@@ -1962,6 +1969,7 @@ body.xprofile .familiarirelatives div[class*="email"] {
 	padding: 5px;
 	margin-top: 65px;
 }
+
 div#item-header div#item-header-content {
 	margin-left: 0 !important;
 }
@@ -1969,10 +1977,13 @@ div#item-header div#item-header-content {
 	position: relative;
 	z-index: 10;
 }
-div.item-list-tabs {
+div.item-list-tabs#object-nav {
 	clear: none !important;
 	margin: 0 !important;
-	background: #84765E !important;
+	background: #fdfdd8 !important;
+	-moz-box-shadow: 0 2px 12px -6px #B5A47B;
+	-webkit-box-shadow: 0 2px 12px -6px #B5A47B;
+	box-shadow: 0 2px 12px -6px #B5A47B;
 }
 div.item-list-tabs ul {
 	font: bold 1.2em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif !important;
@@ -1990,16 +2001,24 @@ div.item-list-tabs ul li {
 }
 div.item-list-tabs ul li a {
 	color: #665942 !important;
-}
-div.item-list-tabs ul li.selected a,
-div.item-list-tabs ul li.current a {
-	background: #fff !important;
 	border-radius: 0 !important;
+}
+div.item-list-tabs#object-nav ul li.selected a,
+div.item-list-tabs#object-nav ul li.current a {
+	background: #efeecd !important;
+}
+div.item-list-tabs#subnav ul li.selected a,
+div.item-list-tabs#subnav ul li.current a {
+	background: #f9f9eb !important;
 }
 
 #object-nav ul li a {
 	padding: 5px 0 5px 55px;
 }
+#subnav ul li a {
+	padding: 5px 0 5px 27px;
+}
+
 div.item-list-tabs#subnav {
 	float: left;
 	position: absolute;
@@ -2008,14 +2027,26 @@ div.item-list-tabs#subnav {
 	right: 0;
 	background: #efeecd !important;
 	width: 150px;
+	border: 0 !important;
+	margin: 0 !important;
 }
-#subnav {
+
+div.item-list-tabs#subnav .subshadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 100%;
+	background: url('images/subshadow.png') no-repeat 0 50%;
 }
-#subnav .item-list-tabs {
-}
+
 #subnav ul {
 	font-weight: normal !important;
 	font-style: italic !important;
+}
+#subnav ul li {
+	line-height: 1.7em;
+	font-size: .9em;
 }
 #subnav ul li.selected a, 
 #subnav ul li.current a {
@@ -2235,4 +2266,3 @@ body.page-id-119 #main-inner .article a,
 body.page-id-123 #main-inner .article a {
 	text-decoration: none;
 }
-table#dbem-bookings-table{width:85%;}
