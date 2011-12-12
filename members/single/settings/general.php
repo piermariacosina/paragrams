@@ -14,7 +14,7 @@
 		<div class="padder">
 
 			<?php do_action( 'bp_before_member_settings_template' ); ?>
-
+			<div id="user-side">
 			<div id="item-header">
 
 				<?php locate_template( array( 'members/single/member-header.php' ), true ); ?>
@@ -31,21 +31,22 @@
 
 					</ul>
 				</div>
+				<div class="item-list-tabs no-ajax" id="subnav">
+									<ul>
+				
+										<?php bp_get_options_nav(); ?>
+				
+										<?php do_action( 'bp_member_plugin_options_nav' ); ?>
+				
+									</ul>
+								</div><!-- .item-list-tabs -->
 			</div><!-- #item-nav -->
-
+			</div><!-- #user-side -->
 			<div id="item-body" role="main">
 
 				<?php do_action( 'bp_before_member_body' ); ?>
 
-				<!--<div class="item-list-tabs no-ajax" id="subnav">
-					<ul>
-
-						<?php bp_get_options_nav(); ?>
-
-						<?php do_action( 'bp_member_plugin_options_nav' ); ?>
-
-					</ul>
-				</div><!-- .item-list-tabs -->
+				
 
 				<h3><?php _e( 'General Settings', 'buddypress' ); ?></h3>
 
