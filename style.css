@@ -1877,7 +1877,7 @@ body.xprofile .familiarirelatives div[class*="email"] {
 
 
 #item-body {
-	width: 675px;
+	width: 100%;
 	display: inline-block;
 	background: #fff;
 	float: right;
@@ -2160,3 +2160,4 @@ body.page-id-119 #main-inner .article a,
 body.page-id-123 #main-inner .article a {
 	text-decoration: none;
 }
+table#dbem-bookings-table{width:85%;}
