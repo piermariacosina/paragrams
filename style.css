@@ -557,13 +557,14 @@ body.register #content {
 .standard-form textarea, .standard-form input[type="text"], 
 .standard-form select,
 .standard-form input[type="password"],
-.dir-search input[type="text"] {
+.dir-search input[type="text"],
+#galleries #gallery_title,
+#galleries #gallery_description {
 	background-color: #f4f1e7;
 	border: 0px !important;
 	border-radius: 0px !important;
 	color: #888 !important;
 	padding: 6px !important;
-	width: 98% !important;
 }
 .datebox select[id*="day"] {
 	width: 110px !important;
@@ -628,7 +629,8 @@ input#upload,
 a[title="Delete Avatar"],
 input#avatar-crop-submit,
 div#send-private-message a,
-#dbem-bookings-table tbody tr td .em-bookings-cancel
+#dbem-bookings-table tbody tr td .em-bookings-cancel,
+#galleries form input[type="submit"]
 /*
 .submit input[type="button"],
 .submit input[type="reset"],
@@ -2434,6 +2436,66 @@ body.gallery .gallery-actions a {
 body.my-galleries #item-body .gnav {			/* <- use better selector */
 	margin: 15px 15px 20px 55px !important;
 	font-size: 1.2em;
+}
+#gallery-header {
+	height: 21px;
+	margin: 0 !important;
+}
+#gallery-header .single-gallery-header {
+	text-align: center;
+}
+#gallery-header a {
+	background: none !important;
+	border: 0 !important;
+	padding: 5px 10px 5px !important;
+	font: 1em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	text-transform: uppercase;
+	color: #7BB9BA !important;
+	border-radius: 0 !important;
+}
+#gallery-header a.current {
+	background: #7BB9BA !important;
+	color: #fff !important;
+}
+#gallery-header a:last-child {
+	color: #000 !important;
+}
+#gallery-organize {
+	border: 1px solid #7BB9BA !important;
+	border-radius: 2px;
+}
+#gallery-organize {
+	margin: 0 !important;
+	padding: 1px 15px 15px !important;
+}
+div.edit-gallery .edit-info,
+.galleries .edit-media,
+div#gallery-organize .edit-info {
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 393px !important;
+}
+div.edit-gallery .gallery-cover,
+.media-cover {
+	width: auto !important;
+	margin-right: 30px;
+}
+#galleries #gallery_title,
+#gallery_description {
+	width: 381px;
+}
+#gallery_description {
+	height: 200px !important;
+}
+#galleries #gallery_title,
+#galleries #gallery_description {
+	font: 1em/1.2em "Times New Roman", Times, serif;
+}
+#galleries form input[type="submit"] {
+	margin: 0 !important;
+	position: relative;
+	top: 15px;
+	left: 180px;
 }
 
 
