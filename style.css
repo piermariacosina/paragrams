@@ -1979,6 +1979,41 @@ body.settings #item-body h3 + form input#submit {
 
 /* ** */
 
+body.notifications #settings-form {
+	font-size: 1.25em;
+}
+body.notifications #settings-form p:first-child {
+	margin: 5px 0 10px;
+}
+body.notifications form#settings-form table {
+	position: relative !important;
+	left: -55px;
+}
+body.settings #item-body h3 + form {
+	font-size: 1.25em !important;
+}
+body.notifications form#settings-form table thead {
+	font: italic 1em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	color: #665942;
+}
+body.notifications form#settings-form table thead th {
+	font-weight: normal !important;
+	background: #f6f0dc;
+	height: 30px;
+}
+body.notifications form#settings-form table thead th.title,
+body.notifications form#settings-form table tbody tr td:nth-child(2) {
+	padding-left: 55px;
+}
+body.notifications form#settings-form table tbody tr {
+	height: 36px;
+}
+body.notifications form#settings-form table tbody tr input {
+	padding-top: 5px;
+}
+
+/* ** */
+
 #item-body {
 	width: 675px;
 	display: inline-block;
@@ -2082,9 +2117,10 @@ div.profile h4 {
 	display: none;
 }
 
-div.profile table {
+div.profile table,
+body.notifications form#settings-form table {
 	position: absolute;
-	width: 665px;
+	width: 660px;
 }
 div.profile table tr td.label {
 	font: italic 1.23em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
