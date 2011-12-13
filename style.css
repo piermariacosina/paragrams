@@ -727,7 +727,8 @@ body.home-page .mcol li:last-child {
 
 body.xprofile .padder,
 body.messages .padder,
-body.settings .padder {
+body.settings .padder,
+body.gallery .padder {
 	background: url(images/profile_back.png) center top repeat-y;
 	overflow: auto;
 	width: 1000px;
@@ -2040,7 +2041,8 @@ div#item-header div#item-header-content {
 	position: relative;
 	z-index: 10;
 }
-div.item-list-tabs#object-nav {
+div.item-list-tabs#object-nav,
+div.item-list-tabs#sub-nav {
 	clear: none !important;
 	margin: 0 !important;
 	background: #fdfdd8 !important;
@@ -2067,7 +2069,8 @@ div.item-list-tabs ul li a {
 	border-radius: 0 !important;
 }
 div.item-list-tabs#object-nav ul li.selected a,
-div.item-list-tabs#object-nav ul li.current a {
+div.item-list-tabs#object-nav ul li.current a
+div.item-list-tabs#sub-nav ul li.current a {
 	background: #efeecd !important;
 }
 div.item-list-tabs#subnav ul li.selected a,

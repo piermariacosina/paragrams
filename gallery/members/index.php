@@ -18,6 +18,7 @@
 					</ul>
 				</div>
 				<div class="item-list-tabs no-ajax" id="subnav">
+				<div class="subshadow"></div>
 					<ul>
 					<?php //bp_get_options_nav() ?>
 					<?php bp_user_gallery_admin_tabs();?>
