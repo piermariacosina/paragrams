@@ -559,7 +559,8 @@ body.register #content {
 .standard-form input[type="password"],
 .dir-search input[type="text"],
 #galleries #gallery_title,
-#galleries #gallery_description {
+#galleries #gallery_description,
+#gallery_web_url {
 	background-color: #f4f1e7;
 	border: 0px !important;
 	border-radius: 0px !important;
@@ -2466,14 +2467,19 @@ body.my-galleries #item-body .gnav {			/* <- use better selector */
 }
 #gallery-organize {
 	margin: 0 !important;
-	padding: 1px 15px 15px !important;
+	padding: 15px !important;
 }
 div.edit-gallery .edit-info,
 .galleries .edit-media,
 div#gallery-organize .edit-info {
 	padding: 0 !important;
 	margin: 0 !important;
-	width: 393px !important;
+/*	width: 393px !important; */
+}
+.edit-media,
+.edit-gallery {
+	height: auto !important;
+	overflow: auto !important;	
 }
 div.edit-gallery .gallery-cover,
 .media-cover {
@@ -2488,16 +2494,54 @@ div.edit-gallery .gallery-cover,
 	height: 200px !important;
 }
 #galleries #gallery_title,
-#galleries #gallery_description {
+#galleries #gallery_description,
+#gallery_web_url {
 	font: 1em/1.2em "Times New Roman", Times, serif;
 }
-#galleries form input[type="submit"] {
+#galleries form input[type="submit"] {		/* <- general button for galleries */
 	margin: 0 !important;
 	position: relative;
-	top: 15px;
-	left: 180px;
 }
-
+#galleries form input[name="save"] {
+	margin-top: 5px;
+	left: 180px;	
+}
+#gallery-organize {
+	font-size: 1.05em;
+	line-height: 1.2em;
+}
+#gallery-organize form {
+	overflow: auto;
+}
+form#gallery_media_upload_form object#SWFUpload_0.swfupload {
+	position: relative;
+	top: -9px;
+}
+#from-my-comuter p,
+#from-my-computer p,
+#from-remote-url p {
+	margin-bottom: 15px;
+	color: #665942;
+}
+#from-my-comuter p:last-child {
+	margin-bottom: 0;
+	font-size: .95em !important;
+}
+#from-remote-url div.guploading + p {
+	margin-bottom: 0;
+}
+#from-remote-url #gallery_status {
+	margin-left: 10px;
+}
+div#message {
+	margin: 0 !important;
+}
+#gallery_web_url {
+	width: 274px;
+}
+#from-remote-url input#gallery_save_from_web {
+	font-size: 1em;
+}
 
 /* SPECIAL STYLES **************************************************/
 
