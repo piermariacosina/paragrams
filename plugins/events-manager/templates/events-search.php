@@ -21,7 +21,7 @@
 		<?php do_action('em_template_events_search_form_header'); ?>
 		<!-- START General Search -->
 		<?php /* This general search will find matches within event_name, event_notes, and the location_name, address, town, state and country. */ ?>
-		<input type="text" name="search" class="em-events-search-text" value="<?php echo $s; ?>" onfocus="if(this.value=='<?php echo $s_default; ?>')this.value=''" onblur="if(this.value=='')this.value='<?php echo $s_default; ?>'" />
+		<!--<input type="text" name="search" class="em-events-search-text" value="<?php echo $s; ?>" onfocus="if(this.value=='<?php echo $s_default; ?>')this.value=''" onblur="if(this.value=='')this.value='<?php echo $s_default; ?>'" />
 		<!-- END General Search -->
 		<!-- START Date Search -->
 		<span class="em-events-search-dates">
@@ -34,7 +34,7 @@
 		</span>
 		<!-- END Date Search -->		
 		<!-- START Category Search -->
-		<select name="category" class="em-events-search-category">
+		<!--<select name="category" class="em-events-search-category">
 			<option value=''><?php _e('All Categories','dbem'); ?></option>
 			<?php foreach(EM_Categories::get(array('orderby'=>'category_name')) as $EM_Category): ?>
 			 <option value="<?php echo $EM_Category->id; ?>" <?php echo (!empty($_REQUEST['category']) && $_REQUEST['category'] == $EM_Category->id) ? 'selected="selected"':''; ?>><?php echo $EM_Category->name; ?></option>
@@ -42,7 +42,7 @@
 		</select>
 		<!-- END Category Search -->
 		<!-- START Country Search -->
-		<select name="country" class="em-events-search-country">
+		<!--<select name="country" class="em-events-search-country">
 			<option value=''><?php _e('All Countries','dbem'); ?></option>
 			<?php 
 			//get the counties from locations table
@@ -56,7 +56,7 @@
 		</select>
 		<!-- END Country Search -->	
 		<!-- START Region Search -->
-		<select name="region" class="em-events-search-region">
+		<!--<select name="region" class="em-events-search-region">
 			<option value=''><?php _e('All Regions','dbem'); ?></option>
 			<?php 
 			if( !empty($country) ){
@@ -71,9 +71,25 @@
 			}
 			?>
 		</select>	
+		
 		<!-- END Region Search -->	
+		<select name="town" class="em-events-search-town">
+			<option value=''><?php _e('All Cities','dbem'); ?></option>
+			<?php 
+			if( !empty($town) ){
+				//get the counties from locations table
+				global $wpdb;
+				$em_towns = $wpdb->get_results($wpdb->prepare("SELECT DISTINCT location_town FROM ".EM_LOCATIONS_TABLE." WHERE location_town IS NOT NULL AND location_town != '' AND location_country=%s", $town), ARRAY_N);
+				foreach($em_towns as $town){
+					?>
+					 <option <?php echo ($_REQUEST['town'] == $town[0]) ? 'selected="selected"':''; ?>><?php echo $town[0]; ?></option>
+					<?php 
+				}
+			}
+			?>
+		</select>
 		<!-- START State/County Search -->
-		<select name="state" class="em-events-search-state">
+		<!--<select name="state" class="em-events-search-state">
 			<option value=''><?php _e('All States','dbem'); ?></option>
 			<?php 
 			if( !empty($country) ){
