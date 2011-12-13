@@ -1,5 +1,8 @@
 <?php
 	global $EM_Event, $current_user, $localised_date_formats, $EM_Notices, $bp;
+	
+	
+	echo "drduftffhgfghjfghjfjhgfhgjfhjfdtydtd";
 	//check that user can access this page
 	if( is_object($EM_Event) && !$EM_Event->can_manage('edit_events','edit_others_events') ){
 		?>

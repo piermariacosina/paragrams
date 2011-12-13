@@ -4,11 +4,11 @@
 		<div class="padder">
 
 			<?php do_action( 'bp_before_member_plugin_template' ) ?>
-
+			<div id="user-side">
 			<div id="item-header">
 				<?php locate_template( array( 'members/single/member-header.php' ), true ) ?>
 			</div>
-			<div id="user-side">
+			
 			<div id="item-nav">
 				<div class="item-list-tabs no-ajax" id="sub-nav">
 					<ul>
