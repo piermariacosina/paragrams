@@ -1781,7 +1781,8 @@ body.messages form#send_message_form div.submit,
 body.messages form#send-reply div.submit,
 body.xprofile .familiarirelatives div.submit,
 body.xprofile form#profile-edit-form div.submit,
-body.settings form div.submit {
+body.settings form div.submit,
+body.compose form #send_message_form div.submit {
 	background: none !important;
 	border: 0 !important;
 	cursor: default;
@@ -2125,7 +2126,7 @@ div.profile h4 {
 
 div.profile table,
 body.notifications form#settings-form table {
-	position: absolute;
+/*	position: absolute; */
 	width: 660px;
 }
 div.profile table tr td.label {
@@ -2177,7 +2178,7 @@ div.profile table tr td.data a {
 	float: right;	
 }
 body.profile-edit #item-body {
-	min-height: 1105px;
+	min-height: 1305px;
 }
 body.profile-edit .button-nav {
 	height: 30px;
@@ -2291,7 +2292,25 @@ body.messages div#message p {
 	padding: 0 !important;
 }
 
+/*
+** gmap on profile
+*/
 
+div.profile .map-display {
+	float: none !important;
+	margin: 20px 0 0 55px !important;
+}
+div.profile .map-display #map_canvas {
+	width: 610px !important;
+}
+div.profile .map-display p.map-title {
+	color: #665942;
+	font: 400 1.25em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	margin-bottom: 8px;
+}
+div.profile .map-display p.map-title a {
+	font-style: italic;
+}
 
 /* SPECIAL STYLES **************************************************/
 
