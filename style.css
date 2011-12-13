@@ -627,7 +627,8 @@ body.settings #item-body h3 + form label {
 input#upload,
 a[title="Delete Avatar"],
 input#avatar-crop-submit,
-div#send-private-message a
+div#send-private-message a,
+#dbem-bookings-table tbody tr td .em-bookings-cancel
 /*
 .submit input[type="button"],
 .submit input[type="reset"],
@@ -728,7 +729,8 @@ body.home-page .mcol li:last-child {
 body.xprofile .padder,
 body.messages .padder,
 body.settings .padder,
-body.gallery .padder {
+body.gallery .padder,
+body.events .padder {
 	background: url(images/profile_back.png) center top repeat-y;
 	overflow: auto;
 	width: 1000px;
@@ -1613,7 +1615,7 @@ table.em-calendar tr.days-names td {
 
 
 /*
-** budypress
+** buddypress
 */
 
 body.directory .padder {
@@ -1765,7 +1767,8 @@ div#item-meta #send-private-message a {
 body.messages form#send_message_form,
 body.messages #message-thread,
 body.messages .messages,
-body.settings #item-body h3 + form {
+body.settings #item-body h3 + form,
+body.gallery div#galleries { 
 	margin: 0 15px 0 55px;
 	font: 400 1.2em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif;
 	color: #665942;
@@ -1887,7 +1890,8 @@ body.messages .messages table#message-threads tr td.thread-info p.thread-excerpt
 	font-size: 100% !important;
 	padding-top: 1px;
 	line-height: 1.3em;
-	color: #665942;	
+	color: #665942;
+	font-weight: normal !important;
 }
 body.messages .messages table#message-threads tr td.thread-options a {
 	width: 35px !important;
@@ -1909,6 +1913,10 @@ body.messages .messages table#message-threads tr td.thread-options a:hover {
 body.messages .messages table#message-threads tr td.thread-options input {
 	margin: 25px 5px 0 10px !important;
 }
+table#message-threads tr.unread td {
+	border: 0 !important;
+}
+
 
 /* ** */
 
@@ -2022,6 +2030,70 @@ body.messages div#message {
 
 /* ** */
 
+body.events #item-body h3 {
+	color: #D87264;
+	font: italic 2.2em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	text-transform: capitalize;
+	letter-spacing: 0.04em;
+	padding: 25px 0 0 60px;
+}
+#dbem-bookings-table th:nth-child(1),
+#dbem-bookings-table th:nth-child(2) {
+	width: 125px;
+}
+#dbem-bookings-table th:nth-child(3) {
+	width: 80px;
+}
+#dbem-bookings-table th:nth-child(4) {
+	width: 90px;
+}
+#dbem-bookings-table th:nth-child(1),
+#dbem-bookings-table td:nth-child(1) {
+	padding-left: 60px !important;
+}
+#dbem-bookings-table td:nth-child(1),
+#dbem-bookings-table td:nth-child(2),
+#dbem-bookings-table td:nth-child(3) {
+	padding: 4px 30px 5px 0;
+}
+#dbem-bookings-table td:nth-child(1) {
+	font: bold italic 1.2em/1.6em 'PT Sans Narrow',Arial,Helvetica,Geneva,sans-serif;
+	letter-spacing: 0.075em;
+}
+#dbem-bookings-table tbody tr td {
+	font: 1.2em/1em "Neuton",Georgia,"Times New Roman",Times,serif;
+	color: #665942;
+}
+#dbem-bookings-table tbody tr td a,
+#dbem-bookings-table tbody tr td a:visited {
+	text-decoration: none;
+	color: #665942;
+}
+#dbem-bookings-table tbody tr td .em-bookings-cancel {
+	font-size: 1em !important;
+	padding: 2px 6px 4px !important;
+	position: relative;
+	top: 0;
+}
+#dbem-bookings-table thead tr th {
+	background: white;
+	font: italic 1.2em/1em 'PT Sans Narrow',Arial,Helvetica,Geneva,sans-serif;
+	color: #7DB9B9;
+	text-transform: uppercase;
+	letter-spacing: 0.075em;
+	padding-top: 35px;
+	padding-bottom: 10px;
+}
+#dbem-bookings-table tbody tr:nth-child(odd) {
+	background: #F6F1DF;
+}
+#dbem-bookings-table tbody tr:nth-child(even) {
+	background: none;
+}
+
+
+/* ** */
+
 #item-body {
 	width: 675px;
 	display: inline-block;
@@ -2069,7 +2141,8 @@ div.item-list-tabs ul li a {
 	border-radius: 0 !important;
 }
 div.item-list-tabs#object-nav ul li.selected a,
-div.item-list-tabs#object-nav ul li.current a
+div.item-list-tabs#object-nav ul li.current a,
+div.item-list-tabs#sub-nav ul li.selected a,
 div.item-list-tabs#sub-nav ul li.current a {
 	background: #efeecd !important;
 }
@@ -2078,8 +2151,9 @@ div.item-list-tabs#subnav ul li.current a {
 	background: #f9f9eb !important;
 }
 
-#object-nav ul li a {
-	padding: 5px 0 5px 55px;
+#object-nav ul li a,
+#sub-nav ul li a {
+ 	padding: 5px 0 5px 40px;
 }
 #subnav ul li a {
 	padding: 5px 0 5px 27px;
@@ -2234,7 +2308,8 @@ body.change-avatar div.profile form #avatar-upload {
 	padding: 15px;
 	margin-bottom: 22px;
 }
-body.change-avatar div.profile form a[title="Delete Avatar"] {
+body.change-avatar div.profile form a[title="Delete Avatar"],
+#dbem-bookings-table tbody tr td .em-bookings-cancel {
 	background: #433f3a !important;
 	border-color: #000 !important;
 }
@@ -2254,7 +2329,8 @@ body.change-avatar div.profile form h5 {
 
 div#message.updated p,
 div#message.error p,
-body.messages div#message p {
+body.messages div#message p,
+body.gallery div#message p {
 	border: none !important;
 	font: 1.2em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif !important;
 	text-transform: uppercase;
@@ -2263,9 +2339,12 @@ span.activity, div#message p {
 	border-radius: 0 !important;
 	background-image: none !important;
 }
-body.messages div#message p {
+body.messages div#message p,
+body.gallery div#message p  {
 	font-size: 1em !important;
 }
+
+
 
 /*
 ** fb button
@@ -2314,6 +2393,49 @@ div.profile .map-display p.map-title {
 div.profile .map-display p.map-title a {
 	font-style: italic;
 }
+
+/*
+** galleries
+*/
+
+body.gallery .gnav {
+	margin: 15px 0 20px !important;
+	font-size: 1.2em;
+}
+body.gallery .gnav a {
+	background: none !important;
+	border: 0 !important;
+	font-size: inherit !important;
+	color: #D87264 !important;
+	font-style: italic;
+	padding: 0 10px 0 0 !important;
+	margin: 0 !important;
+}
+body.gallery .gnav a:before {
+	content: "\00ab";
+	font-style: normal;
+	padding-right: 10px;
+}
+body.gallery .gnav span {
+	padding-left: 10px;
+}
+
+body.gallery .gallery-actions {
+	font: 1em/1em 'PT Sans Narrow',Arial,Helvetica,Geneva,sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.075em;
+	padding: 0 0 10px;
+}
+body.gallery .gallery-actions a {
+	color: #7DB9B9;
+	font-style: italic;
+	margin: 0 8px 0 0;
+}
+body.my-galleries #item-body .gnav {			/* <- use better selector */
+	margin: 15px 15px 20px 55px !important;
+	font-size: 1.2em;
+}
+
 
 /* SPECIAL STYLES **************************************************/
 
