@@ -1,8 +1,5 @@
 <?php
 	global $EM_Event, $current_user, $localised_date_formats, $EM_Notices, $bp;
-	
-	
-	echo "drduftffhgfghjfghjfjhgfhgjfhjfdtydtd";
 	//check that user can access this page
 	if( is_object($EM_Event) && !$EM_Event->can_manage('edit_events','edit_others_events') ){
 		?>
@@ -211,7 +208,7 @@
 					</select>
 					<?php endif; ?>
 					<?php $location_link = ( is_object($bp) ) ? $bp->events->link . 'my-locations/add/' : get_bloginfo('wpurl').'/wp-admin/admin.php?page=events-manager-locations&amp;action=add';	?>
-					<p><?php _e ( 'Choose from one of your locations', 'dbem' )?> <?php if(current_user_can('edit_locations')){ echo sprintf(__('or <a href="%s">add a new location</a>','dbem'),$location_link); } ?></p>
+					<p><?php _e ( 'Choose from one of your locations', 'dbem' )?> <!--<?php if(current_user_can('edit_locations')){ echo sprintf(__('or <a href="%s">add a new location</a>','dbem'),$location_link); } ?>--></p>
 				
 					<?php if ( get_option ( 'dbem_gmap_is_active' ) ) : ?>
 					<div id='em-map-404' style='width: 400px; vertical-align:middle; text-align: center;'>
@@ -285,10 +282,10 @@
 				<h4><span><?php _e('Bookings/Registration','dbem'); ?></span></h4>
 				<div class="event-bookings event-form-bookings">
 					<p>
-						<input id="bookings-checkbox" name='event_rsvp' value='1' type='checkbox' <?php echo ($EM_Event->rsvp) ? 'checked="checked"' : ''; ?> />
+						<input id="bookings-checkbox" name='event_rsvp' value='1' type='checkbox' style='display: none;' <?php echo ($EM_Event->rsvp) ? 'checked="checked"' : 'checked="checked';  ?> />
 						<?php _e ( 'Enable registration for this event', 'dbem' )?>
 						<br />
-						<a id='printable' href='<?php echo $EM_Event->output('#_BOOKINGSURL'); ?>'><?php _e('manage bookings','dbem')?></a> | 
+						<!--<a id='printable' href='<?php echo $EM_Event->output('#_BOOKINGSURL'); ?>'><?php _e('manage bookings','dbem')?></a> | -->
 						<a target='_blank' href='<?php echo get_bloginfo('wpurl') . "/wp-admin/admin.php?page=events-manager-bookings&action=bookings_report&event_id=".$EM_Event->id ?>'><?php _e('printable view','dbem')?></a> | 
 						<a href='<?php echo get_bloginfo('wpurl') . "/wp-admin/admin.php?page=events-manager-bookings&action=export_csv&event_id=".$EM_Event->id ?>'><?php _e('export csv','dbem')?></a>
 					</p>
@@ -402,10 +399,11 @@
 				<!-- END Bookings -->
 			<?php endif; ?>
 			<?php do_action('em_front_event_form_footer'); ?>
+			<p class="submit">
+				<input type="submit" name="events_update" value="<?php _e ( 'Submit Event', 'dbem' ); ?> &raquo;" />
+			</p>
 		</div>
-		<p class="submit">
-			<input type="submit" name="events_update" value="<?php _e ( 'Submit Event', 'dbem' ); ?> &raquo;" />
-		</p>
+		
 		<input type="hidden" name="event_id" value="<?php echo $EM_Event->id; ?>" />
 		<input type="hidden" name="_wpnonce" value="<?php echo wp_create_nonce('wpnonce_event_save'); ?>" />
 		<input type="hidden" name="action" value="event_save" />

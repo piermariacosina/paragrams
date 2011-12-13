@@ -2537,3 +2537,14 @@ body.page-id-119 #main-inner .article a,
 body.page-id-123 #main-inner .article a {
 	text-decoration: none;
 }
+
+
+
+
+/*********************HIDE EVENTS MENU UNWANTED TABS*******************/
+#profile-personal-li,
+#my-locations-personal-li,
+#my-bookings-personal-li {
+	visibility: hidden;
+	display: none;
+}

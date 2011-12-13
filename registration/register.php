@@ -222,7 +222,7 @@
 				<?php do_action( 'bp_before_registration_submit_buttons' ) ?>
 
 				<div class="submit">
-					<input type="submit" name="signup_submit" id="signup_submit" value="<?php _e( 'Complete Sign Up', 'buddypress' ) ?>" />
+					<input type="submit" name="signup_submit" id="signup_submit" value="<?php _e( 'Complete Sign Up and register your location', 'buddypress' ) ?>" />
 				</div>
 
 				<?php do_action( 'bp_after_registration_submit_buttons' ) ?>
@@ -253,6 +253,8 @@
 			</form>
 
 		</div>
+		
+		
 
 		<?php do_action( 'bp_after_register_page' ) ?>
 
