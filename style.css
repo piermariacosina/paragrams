@@ -2161,7 +2161,9 @@ div.item-list-tabs#subnav ul li.current a {
 #subnav ul li a {
 	padding: 5px 0 5px 27px;
 }
-
+#object-nav ul li a {
+	max-width: 150px;
+}
 div.item-list-tabs#subnav {
 	float: left;
 	position: absolute;
@@ -2510,7 +2512,8 @@ div.edit-gallery .gallery-cover,
 	font-size: 1.05em;
 	line-height: 1.2em;
 }
-#gallery-organize form {
+#gallery-organize form,
+#gallery_create_form {
 	overflow: auto;
 }
 form#gallery_media_upload_form object#SWFUpload_0.swfupload {
