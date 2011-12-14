@@ -6,7 +6,8 @@
  * 
  * $args - the args passed onto EM_Events::output() 
  */
-global $EM_Event;
+global $EM_Event, $bp;
+
 /* @var $EM_Event EM_Event */
 if( $EM_Event->status == 1 ){
 	echo $EM_Event->output_single();
@@ -21,10 +22,10 @@ if( $EM_Event->status == 1 ){
 <!-- end of gallery -->
 
 <?php
-if(testimonial_current_user_can_write_event($EM_Event->event_owner))
-    bp_testimonials_post_form();
+if(testimonial_current_user_can_write_event($EM_Event->event_owner))?>
+    <a href="<?php echo bp_core_get_user_domain($EM_Event->event_owner)?><?php echo $bp->testimonials->root_slug; ?>/create/">leave a testimonial</a>
  
-$args = array(
+<?php $args = array(
                 'user_id'=> $EM_Event->event_owner 
         );
  
