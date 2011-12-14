@@ -3,8 +3,9 @@
 	
 	<?php bp_user_gallery_admin_tabs();?>
 </ul>
-<?php global $bp; gallery_display_space_usage("user",$bp->displayed_user->id)?>
+
 </div>-->
+<?php global $bp; gallery_display_space_usage("user",$bp->displayed_user->id)?>
 <div class="gnav"><?php bp_gallery_bcomb();?>	</div>
 
 				<div id="galleries">
