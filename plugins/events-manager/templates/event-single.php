@@ -12,8 +12,15 @@ if( $EM_Event->status == 1 ){
 	echo $EM_Event->output_single();
 }else{
 	echo get_option('dbem_no_events_message');
-}
+}?>
 
+<?php //locate_template( array( 'gallery/events_manager/create.php' ), true ) ;?>
+
+<!--Embed user gallery in the event-->
+<?php echo do_shortcode('[bp-gallery owner_type="user" owner_id="'.$EM_Event->event_owner.'" max="3"  ]'); ?>
+<!-- end of gallery -->
+
+<?php
 if(testimonial_current_user_can_write_event($EM_Event->event_owner))
     bp_testimonials_post_form();
  

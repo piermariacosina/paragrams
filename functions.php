@@ -279,7 +279,7 @@ function comedanonna_printVideoContent( $p = null, $size = 'medium' )
 		$img = get_the_post_thumbnail( $post_id, $size );
 		if( !$o ) return ( $img ) ? $img : 'No content to display';
 		$r = $oembed->fetch( $o, $video_url );
-		return ( $img ) ? '<a href="'.$video_url.'" title="'.$r->title.'" class="profileVideoLinks" rel="wp-video-lightbox">'.$img.'</a>' : $r->html;
+		return ( $img ) ? '<a href="'.$video_url.'" title="'.$r->title.'" class="profileVideoLinks" rel="prettyPhoto">'.$img.'</a>' : $r->html;
 	}
 	return false;
 }
