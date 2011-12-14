@@ -9,7 +9,7 @@
 			</p>
 				
 			<div class="gallery-meta">
-			<p><?php _e("Visibility","bp-gallery");?><?php gallery_valid_gallery_status_dd();?></p>
+			<p style="display: none;,visibility: hidden"><?php _e("Visibility","bp-gallery");?><?php gallery_valid_gallery_status_dd();?></p>
 			<p><input type="submit" value='<?php _e("Save Gallery","bp-gallery");?>' name="save" id="gallery_save" />
 			
 			
