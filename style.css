@@ -563,7 +563,8 @@ body.register #content {
 #gallery_web_url,
 #media_bulk_edit_form div.edit-media .edit-info input,
 #media_bulk_edit_form div.edit-media .edit-info textarea,
-body.my-events .search-box input#post-search-input {
+body.my-events .search-box input#post-search-input,
+form#testimonial-form #new-testimonial-textarea textarea {
 	background-color: #f4f1e7;
 	border: 0px !important;
 	border-radius: 0px !important;
@@ -599,7 +600,8 @@ body.my-events .search-box input#post-search-input {
 .register-section label,
 .editfield .radio span,
 #send_message_form label,
-body.settings #item-body h3 + form label {
+body.settings #item-body h3 + form label,
+form#testimonial-form h5 {
 	font: 1.2em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
 	color: #665942;
 	text-transform: uppercase;	
@@ -725,12 +727,12 @@ body.home-page .mcol li:last-child {
 }
 
 
-
 body.xprofile .padder,
 body.messages .padder,
 body.settings .padder,
 body.gallery .padder,
-body.events .padder {
+body.events .padder,
+body.testimonials .padder {
 	background: url(images/profile_back.png) center top repeat-y;
 	overflow: auto;
 	width: 1000px;
@@ -1130,7 +1132,7 @@ li.comment {
 .avatar {
 	float: left;
 	text-align: top;
-	padding-right: 10px;
+	padding-right: 5px;
 }
 
 .comment-body em {
@@ -1768,7 +1770,9 @@ body.messages form#send_message_form,
 body.messages #message-thread,
 body.messages .messages,
 body.settings #item-body h3 + form,
-body.gallery div#galleries { 
+body.gallery div#galleries,
+form#testimonial-form,
+body.testimonials div#message.error {
 	margin: 0 15px 0 55px;
 	font: 400 1.2em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif;
 	color: #665942;
@@ -1924,7 +1928,8 @@ div#message-thread div.message-box {
 	margin: 0 0 35px 0 !important;
 	padding: 0 !important;
 }
-div#message-thread div.message-box strong a {
+div#message-thread div.message-box strong a,
+div.testimonials .activity-header a {
 	font: bold .8em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif !important;
 	text-transform: uppercase;
 	letter-spacing: .1em;	
@@ -2054,11 +2059,17 @@ body.events #item-body h3 {
 #dbem-bookings-table td:nth-child(1),
 #dbem-bookings-table td:nth-child(2),
 #dbem-bookings-table td:nth-child(3) {
-	padding: 4px 30px 5px 0;
+	padding: 13px 30px 14px 0;
 }
 #dbem-bookings-table td:nth-child(1) {
 	font: bold italic 1.2em/1.6em 'PT Sans Narrow',Arial,Helvetica,Geneva,sans-serif;
 	letter-spacing: 0.075em;
+}
+#dbem-bookings-table td:nth-child(1):first-letter {
+	text-transform: uppercase;
+}
+#dbem-bookings-table td:nth-child(3) {
+	text-indent: 24px;
 }
 #dbem-bookings-table tbody tr td {
 	font: 1.2em/1em "Neuton",Georgia,"Times New Roman",Times,serif;
@@ -2068,12 +2079,14 @@ body.events #item-body h3 {
 #dbem-bookings-table tbody tr td a:visited {
 	text-decoration: none;
 	color: #665942;
+	line-height: 1.05em;
+	
 }
 #dbem-bookings-table tbody tr td .em-bookings-cancel {
 	font-size: 1em !important;
 	padding: 2px 6px 4px !important;
 	position: relative;
-	top: 0;
+	top: -1px;
 }
 #dbem-bookings-table thead tr th {
 	background: white;
@@ -2186,6 +2199,65 @@ body.my-events .search-box input.button {
 	color: #665942;
 }
 
+/* ** */
+
+form#testimonial-form {
+	border: 0 !important;
+	margin-top: 15px;
+	background: url('images/testimonial.png') no-repeat 54px 27px;
+}
+form#testimonial-form h5 {
+	font-size: 1em !important;
+	color: #665942 !important;
+	padding-bottom: 4px !important;
+}
+form#testimonial-form #testimonial-writer-avatar {
+	margin-top: 18px;
+}
+form#testimonial-form #new-testimonial-textarea textarea {
+	height: 100px;
+}
+body.testimonials div#message.error {
+	margin: 0 15px 0 55px !important;
+	font-style: italic;
+	font-size: 1.3em;
+}
+body.testimonials ul#testimonial-list.item-list {
+	left: 0;
+	
+}
+body.testimonials ul#testimonial-list.item-list .item-avatar img {
+	margin: 0 !important;
+	border: 0 !important;
+	padding: 0;
+}
+body.testimonials ul#testimonial-list.item-list .testomonial-content {
+	margin-left: 90px;
+	font: 1.3em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	font-weight: 400;
+	color: #665942;
+}
+.testimonials span.pending-notice {
+	border: none !important;
+	font: .9em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif !important;
+	text-transform: uppercase;
+	padding: 4px 9px !important;
+}
+div.testimonials .activity-header {
+	font-style: italic;
+	font-size: .9em;
+	clear: both;
+}
+div.testimonials .activity-header a {
+	font-size: .95em !important;
+}
+div.testimonials .testimonial-entry {
+	margin: 5px 0 10px;
+}
+div.testimonials .testimonial-action a {
+	font-style: italic;
+	text-decoration: none;
+}
 
 
 /* ** */
@@ -2284,6 +2356,7 @@ div.item-list-tabs#subnav .subshadow {
 #subnav ul li {
 	line-height: 1.7em;
 	font-size: .9em;
+	white-space: nowrap;
 }
 #subnav ul li.selected a, 
 #subnav ul li.current a {
@@ -2539,6 +2612,12 @@ body.my-galleries #item-body .gnav {			/* <- use better selector */
 }
 #gallery-header .single-gallery-header {
 	text-align: center;
+}
+#gallery-header ul {
+	display: inline-block;
+}
+#gallery-header li {
+	float: left;
 }
 #gallery-header a {
 	background: none !important;
