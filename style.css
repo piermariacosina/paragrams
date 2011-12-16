@@ -564,7 +564,11 @@ body.register #content {
 #media_bulk_edit_form div.edit-media .edit-info input,
 #media_bulk_edit_form div.edit-media .edit-info textarea,
 body.my-events .search-box input#post-search-input,
-form#testimonial-form #new-testimonial-textarea textarea {
+form#testimonial-form #new-testimonial-textarea textarea,
+form[id*="media-edit-inline-form"] p input#media_title,
+form[id*="media-edit-inline-form"] textarea#media_description,
+body.my-events form#event-form .wrap input,
+body.my-events form#event-form .wrap textarea {
 	background-color: #f4f1e7;
 	border: 0px !important;
 	border-radius: 0px !important;
@@ -2198,6 +2202,57 @@ body.my-events .search-box input.button {
 	letter-spacing: 0.075em;
 	color: #665942;
 }
+body.my-events form#event-form {
+	font: 400 1.2em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif !important;
+	color: #665942 !important;
+}
+body.my-events form#event-form h4,
+body.my-events form#event-form .description label {
+	font: 1em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
+	color: #665942;
+	text-transform: uppercase;
+	letter-spacing: .07em;
+	padding: 20px 0 5px 0;
+}
+body.my-events form#event-form input#event-name {
+	width: 330px;
+}
+body.my-events form#event-form input,
+body.my-events form#event-form textarea {
+	margin-bottom: 5px;
+}
+body.my-events form#event-form .event-form-when input {
+	margin: 0 4px;
+}
+body.my-events form#event-form .event-form-when input#em-date-start-loc,
+body.my-events form#event-form .event-form-when input#em-date-end-loc {
+	width: 120px;
+}
+body.my-events form#event-form .event-form-when input#start-time,
+body.my-events form#event-form .event-form-when input#end-time {
+	width: 58px !important;
+}
+body.my-events form#event-form .event-form-when input#em-date-end-loc {
+	margin-bottom: 5px;
+}
+body.my-events form#event-form div.event-form-details textarea,
+body.my-events form#event-form div.em-ticket-form .description textarea {
+	width: 580px !important;
+	height: 130px;
+}
+body.my-events form#event-form div.event-form-when div:first-child {
+	font-style: italic;
+	word-wrap:break-word;
+}
+body.my-events form#event-form div.em-ticket-form {
+	padding: 0 !important;
+}
+body.my-events form#event-form div.em-ticket-form input {
+	margin: 0 4px;
+	
+}
+
+
 
 /* ** */
 
@@ -2441,18 +2496,15 @@ div.profile table tr td.data a {
 	float: right;	
 }
 body.profile-edit #item-body {
-	min-height: 1305px;
+/*	min-height: 1305px; */
 }
 body.profile-edit .button-nav {
 	height: 30px;
 }
-
-body.profile-edit form#profile-edit-form {
-	position: absolute;
-	overflow: hidden;
+body.profile-edit form#profile-edit-form,
+body.my-events form#event-form {
 	width: 615px;
-	right: 10px;
-	top: 10px;
+	margin: 10px 0 10px 55px;
 }
 body.profile-edit form#profile-edit-form .editfield {
 	width: 440px;
@@ -2581,6 +2633,16 @@ div.profile .map-display p.map-title a {
 }
 
 /*
+** gmap on event
+*/
+
+body.my-events .event-form-where #em-map {
+	width: 590px !important;
+	height: 280px !important;
+	margin-top: 5px;
+}
+
+/*
 ** galleries
 */
 
@@ -2651,7 +2713,7 @@ body.my-galleries #item-body .gnav {			/* <- use better selector */
 	background: #7BB9BA !important;
 	color: #fff !important;
 }
-#gallery-header a:last-child {
+#gallery-header li:last-child a {
 	color: #000 !important;
 }
 #gallery-organize {
@@ -2680,7 +2742,6 @@ div.edit-gallery .gallery-cover {
 	max-width: 150px;
 }
 div.edit-gallery .gallery-cover img {
-	max-width: 150px;
 }
 #galleries #gallery_title,
 #gallery_description {
@@ -2694,7 +2755,9 @@ div.edit-gallery .gallery-cover img {
 #gallery_web_url,
 input#gallery_title,
 #media_bulk_edit_form div.edit-media .edit-info input,
-body.my-events .search-box input#post-search-input  {
+body.my-events .search-box input#post-search-input,
+body.my-events form#event-form .wrap input,
+body.my-events form#event-form .wrap textarea {
 	font: .95em/1.2em "Times New Roman", Times, serif;
 }
 #galleries form input[type="submit"] {		/* <- general button for galleries */
@@ -2838,7 +2901,9 @@ form#media_bulk_edit_form div.edit-media .media-cover {
 }
 #galleries .gallery-actions a,
 #galleries div.edit-delete .edit,
-#galleries div.edit-delete .delete  {
+#galleries div.edit-delete .delete,
+form[id*="media-edit-inline-form"] .media-inline-actions .save,
+form[id*="media-edit-inline-form"] .media-inline-actions .cancel  {
 	font: 1.1em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif !important;
 	color: #fff8f1 !important;
 	text-transform: none;
@@ -2901,7 +2966,7 @@ div.bp_gallery_type {
 }
 #galleries div.bp-media .media-content .media-linked {
 	width: 278px;
-	height: 230px;
+	height: 210px;
 	position: relative;
 	top: 0;
 	overflow: hidden;
@@ -2932,15 +2997,15 @@ div.bp_gallery_type {
 	font-weight: 400;
 	font-style: italic;
 	color: #665942;
-	padding: 5px;
+	padding: 5px 0;
 	z-index: 2;
 	position: absolute;
 	top: 210px;
 }
 #galleries div.bp-media .edit-delete {
-	font-size: 1em !important;
+	font-size: .9em !important;
 	position: relative;
-	top: 25px;	
+	top: 45px;
 }
 div.edit-delete .edit {
 	background: #e99b95;
@@ -2950,12 +3015,55 @@ div.edit-delete .delete {
 	background: #665943;
 }
 
-
-
 div.edit-delete .mcomments {  /*  <-- from backend?  */
 	display: none;
 }
 
+form[id*="media-edit-inline-form"] p input#media_title,
+form[id*="media-edit-inline-form"] textarea#media_description {
+	background: #fff;
+	width: 266px;
+}
+form[id*="media-edit-inline-form"] p input#media_title {
+	font: normal italic 1.4em/1em 'PT Sans Narrow',Arial,Helvetica,Geneva,sans-serif;
+	color: #bdb59f !important;
+	letter-spacing: 0.075em;
+	height: 22px;
+}
+form[id*="media-edit-inline-form"] div.media-thumb {
+	margin: 6px 0;
+}
+form[id*="media-edit-inline-form"] a.media-linked {
+	display: inline-block;
+}
+form[id*="media-edit-inline-form"] br {
+	display: none;
+}
+form[id*="media-edit-inline-form"] textarea#media_description {
+	height: 40px;
+	margin-bottom: 7px;	
+}
+form[id*="media-edit-inline-form"] textarea + p {
+	display: inline-block;
+	float: left;
+	margin-left: 7px;
+}
+form[id*="media-edit-inline-form"] .media-inline-actions {
+	font-size: .9em;
+	display: inline-block;
+	float: right;
+	margin-right: 7px;
+}
+form[id*="media-edit-inline-form"] .media-inline-actions a {
+	text-decoration: none;
+}
+form[id*="media-edit-inline-form"] .media-inline-actions .save {
+	background: #e99a95;
+	margin-right: 10px;
+}
+form[id*="media-edit-inline-form"] .media-inline-actions .cancel {
+	background: #665842;	
+}
 
 
 /* SPECIAL STYLES **************************************************/
