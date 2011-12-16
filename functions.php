@@ -386,4 +386,28 @@ function testimonial_current_user_can_write_event($user_event_id){
     
     return apply_filters('bp_testimonials_can_user_write',$can_write);
 }
+
+add_filter('em_event_output_placeholder','my_em_styles_placeholders',1,3);
+function my_em_styles_placeholders($replace, $EM_Event, $result){
+	global $wp_query, $wp_rewrite;
+	
+	
+	
+	switch( $result ){
+		case '#_DONATION_COOK':
+			
+			$replace=BookingHelperRender::getAmounts($EM_Event,"cook");
+			break;
+		case '#_DONATION_CHARITY':
+				
+			$replace=BookingHelperRender::getAmounts($EM_Event,"charity");
+			break;
+		case '#_DONATION_DEVELOPER':
+					
+			$replace=BookingHelperRender::getAmounts($EM_Event,"dev");
+			break;
+	}
+	return $replace;
+}
+
 ?>
