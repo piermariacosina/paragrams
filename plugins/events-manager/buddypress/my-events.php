@@ -1,4 +1,5 @@
 <?php
+
 	//TODO Simplify panel for events, use form flags to detect certain actions (e.g. submitted, etc)
 	global $wpdb, $bp, $EM_Event, $EM_Notices;
 	
@@ -110,28 +111,28 @@
 									<strong>
 										<a class="row-title" href="<?php echo $url; ?>edit/?event_id=<?php echo $event->id ?>"><?php echo ($event->name); ?></a>
 									</strong>
-									<!--<?php 
+									<?php 
 									if( get_option('dbem_rsvp_enabled') == 1 && $event->rsvp == 1 ){
 										?>
 										<br/>
-										<a href="<?php echo $url ?>bookings/?event_id=<?php echo $event->id ?>"><?php echo __("Bookings",'dbem'); ?></a> &ndash;
+										<!--<a href="<?php echo $url ?>bookings/?event_id=<?php echo $event->id ?>"><?php echo __("Bookings",'dbem'); ?></a> &ndash;-->
 										<?php _e("Booked",'dbem'); ?>: <?php echo $event->get_bookings()->get_booked_spaces()."/".$event->get_spaces(); ?>
 										<?php if( get_option('dbem_bookings_approval') == 1 ): ?>
 											| <?php _e("Pending",'dbem') ?>: <?php echo $event->get_bookings()->get_pending_spaces(); ?>
 										<?php endif;
 									}
 									?>
-									<div class="row-actions">
+									<!--<div class="row-actions">
 										<?php if( current_user_can('delete_events')) : ?>
 										<span class="trash"><a href="<?php echo $url ?>?action=event_delete&amp;event_id=<?php echo $event->id ?>" class="em-event-delete"><?php _e('Delete','dbem'); ?></a></span>
 										<?php endif; ?>
 									</div>-->
 								</td>
-								<td>
-								<!--	<a href="<?php echo $url ?>edit/?action=event_duplicate&amp;event_id=<?php echo $event->id ?>" title="<?php _e ( 'Duplicate this event', 'dbem' ); ?>">
+								<!--<td>
+									<a href="<?php echo $url ?>edit/?action=event_duplicate&amp;event_id=<?php echo $event->id ?>" title="<?php _e ( 'Duplicate this event', 'dbem' ); ?>">
 										<strong>+</strong>
-									</a>-->
-								</td>
+									</a>
+								</td>-->
 								<td>
 									<?php echo $location_summary; ?>
 									<?php if( is_object($category) && !empty($category->name) ) : ?>
@@ -157,7 +158,7 @@
 										<?php echo $event->get_recurrence_description(); ?> <br />
 										<a href="<?php echo $url ?>edit/?event_id=<?php echo $event->recurrence_id ?>"><?php _e ( 'Reschedule', 'dbem' ); ?></a>
 										<?php if( current_user_can('delete_events')) : ?>
-										<span class="trash"><a href="<?php echo $url ?>?action=event_delete&amp;event_id=<?php echo $event->id ?>" class="em-event-rec-delete" onclick ="if( !confirm('<?php echo $recurrence_delete_confirm; ?>') ){ return false; }"><?php _e('Delete','dbem'); ?></a></span>
+										<span class="trash"><a href="<?php echo $url ?>?action=event_delete&amp;event_id=<?php echo $event->recurrence_id ?>" class="em-event-rec-delete" onclick ="if( !confirm('<?php echo $recurrence_delete_confirm; ?>') ){ return false; }"><?php _e('Delete','dbem'); ?></a></span>
 										<?php endif; ?>										
 										</strong>
 										<?php

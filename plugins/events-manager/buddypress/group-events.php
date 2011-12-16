@@ -96,7 +96,7 @@
 							}
 							?>
 							<div class="row-actions">
-								<?php if( current_user_can('delete_events')) : ?>
+								<?php if( $event->can_manage('delete_events', 'delete_others_events')) : ?>
 								<span class="trash"><a href="<?php echo $url ?>?action=event_delete&amp;event_id=<?php echo $event->id ?>" class="em-event-delete"><?php _e('Delete','dbem'); ?></a></span>
 								<?php endif; ?>
 							</div>

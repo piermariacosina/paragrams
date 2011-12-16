@@ -9,16 +9,15 @@
 global $EM_Event, $bp;
 
 /* @var $EM_Event EM_Event */
-if( $EM_Event->status == 1 ){
+if( $EM_Event->event_status == 1 ){
 	echo $EM_Event->output_single();
 }else{
 	echo get_option('dbem_no_events_message');
 }?>
 
-<?php //locate_template( array( 'gallery/events_manager/create.php' ), true ) ;?>
 
 <!--Embed user gallery in the event-->
-<?php echo do_shortcode('[bp-gallery owner_type="user" owner_id="'.$EM_Event->event_owner.'" max="3"  ]'); ?>
+ <?php echo do_shortcode('[bp-gallery owner_type="user" owner_id="'.$EM_Event->event_owner.'" max="3"  ]');?>
 <!-- end of gallery -->
 
 <?php
