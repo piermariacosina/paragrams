@@ -540,6 +540,7 @@ body.register #content {
 	background: white repeat 0% 0%;
 	position: relative;
 	left: -20px;
+	z-index: 10;
 }
 #basic-details-section {
 	width: 440px;
@@ -658,6 +659,47 @@ div#send-private-message a,
 .em-booking-submit:hover {
 	color: #cb4145 !important;
 }
+body.register div#tos {
+	width: 420px;
+	position: absolute;
+	bottom: 75px;
+	right: 20px;
+	background: #FAF9D5;
+	padding: 20px 20px 20px 40px;
+}
+body.register div#tos label {
+	position: relative;
+	margin: 0 0 0 17px !important;
+	line-height: 1.3em;
+	padding: 13px 0 0;
+}
+body.register div#tos label input {
+	position: absolute;
+	left: -17px;
+	top: 16px;
+}
+
+
+#pass-strength-result {
+	border-radius: 0 !important;
+	width: 155px !important;
+	font: .75em/1em "Lucida Grande", Lucida, Verdana, sans-serif !important;
+	text-transform: lowercase;
+	padding: 5px !important;
+}
+#pass-strength-result + p {
+	font: 400 1.1em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif !important;
+	color: #665942 !important;
+	text-align: left;
+	font-style: italic !important;
+	padding-top: 7px;
+}
+.standard-form#signup_form div.submit {
+	position: absolute;
+	left: 500px;
+	bottom: -5px;
+}
+
 
 
 .standard-form label,
@@ -671,11 +713,12 @@ div#send-private-message a,
 	height: 14px;
 	overflow: hidden;
 }
-
-
 #profile-details-section .datebox {
 	margin-top: -7px;
 }
+
+
+
 
 
 /*
@@ -1794,7 +1837,9 @@ body.messages form#send-reply div.submit,
 body.xprofile .familiarirelatives div.submit,
 body.xprofile form#profile-edit-form div.submit,
 body.settings form div.submit,
-body.compose form #send_message_form div.submit {
+body.compose form #send_message_form div.submit,
+body.my-events form#event-form p.submit,
+.standard-form#signup_form div.submit {
 	background: none !important;
 	border: 0 !important;
 	cursor: default;
@@ -2226,11 +2271,7 @@ body.my-events form#event-form .event-form-when input {
 }
 body.my-events form#event-form .event-form-when input#em-date-start-loc,
 body.my-events form#event-form .event-form-when input#em-date-end-loc {
-	width: 120px;
-}
-body.my-events form#event-form .event-form-when input#start-time,
-body.my-events form#event-form .event-form-when input#end-time {
-	width: 58px !important;
+	width: 131px !important;
 }
 body.my-events form#event-form .event-form-when input#em-date-end-loc {
 	margin-bottom: 5px;
@@ -2240,18 +2281,34 @@ body.my-events form#event-form div.em-ticket-form .description textarea {
 	width: 580px !important;
 	height: 130px;
 }
-body.my-events form#event-form div.event-form-when div:first-child {
-	font-style: italic;
-	word-wrap:break-word;
+body.my-events form#event-form .event-form-when input#start-time,
+body.my-events form#event-form .event-form-when input#end-time {
+	width: 62px;
 }
-body.my-events form#event-form div.em-ticket-form {
+body.my-events form#event-form div.event-form-when p {
+	font-style: italic;
+}
+body.my-events form#event-form div.em-ticket-form,
+body.my-events form#event-form div.inside {
 	padding: 0 !important;
 }
+body.my-events form#event-form div.inside br:first-child {
+	display: none;
+}
+body.my-events form#event-form div.inside input#event-image {
+	margin: 6px 2px 5px;
+}
 body.my-events form#event-form div.em-ticket-form input {
-	margin: 0 4px;
-	
+	margin: 0 4px;	
 }
 
+body.my-events form#event-form .em-ticket-form label {
+	padding-right: 15px !important;
+}
+body.my-events form#event-form .em-ticket-form div input[name*="ticket_price"],
+body.my-events form#event-form .em-ticket-form div input[name*="ticket_spaces"] {
+	width: 100px;
+}
 
 
 /* ** */
