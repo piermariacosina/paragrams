@@ -22,7 +22,8 @@ if( $EM_Event->event_status == 1 ){
 
 <?php
 if(testimonial_current_user_can_write_event($EM_Event->event_owner))?>
-    <a href="<?php echo bp_core_get_user_domain($EM_Event->event_owner)?><?php echo $bp->testimonials->root_slug; ?>/create/">leave a testimonial</a>
+	<?php if ($EM_Event->event_owner == $bp->loggedin_user->id)?>
+	<a href="<?php echo bp_core_get_user_domain($EM_Event->event_owner)?><?php echo $bp->testimonials->root_slug; ?>/create/">leave a testimonial</a>
  
 <?php $args = array(
                 'user_id'=> $EM_Event->event_owner 

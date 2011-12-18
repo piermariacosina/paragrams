@@ -392,21 +392,22 @@ function my_em_styles_placeholders($replace, $EM_Event, $result){
 	global $wp_query, $wp_rewrite;
 	
 	
-	
 	switch( $result ){
-		case '#_DONATION_COOK':
+		case '#_DONATIONCOOK':
 			
-			$replace=BookingHelperRender::getAmounts($EM_Event,"cook");
+			$replace=BookingHelperRender::getAmounts($EM_Event,"cook")."€";
+			
 			break;
-		case '#_DONATION_CHARITY':
+		case '#_DONATIONCHARITY':
 				
-			$replace=BookingHelperRender::getAmounts($EM_Event,"charity");
+			$replace=BookingHelperRender::getAmounts($EM_Event,"charity")."€";
 			break;
-		case '#_DONATION_DEVELOPER':
+		case '#_DONATIONDEVELOPER':
 					
-			$replace=BookingHelperRender::getAmounts($EM_Event,"dev");
+			$replace=BookingHelperRender::getAmounts($EM_Event,"dev")."€";
 			break;
 	}
+	
 	return $replace;
 }
 
