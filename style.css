@@ -519,7 +519,8 @@ body.register #outer {
 	height: auto;
 }
 
-body.register #content {
+body.register #content,
+body.page-template-user-location-php div#main-inner {
 	height: auto;
 	position: relative;
 	background: #F2EDD4;
@@ -534,7 +535,8 @@ body.register #content {
 .standard-form #profile-details-section {
 	float: none;
 }
-#profile-details-section {
+#profile-details-section,
+body.page-template-user-location-php form#location-form {
 	width: 440px;
 	padding: 20px 20px 20px 40px;
 	background: white repeat 0% 0%;
@@ -569,7 +571,9 @@ form#testimonial-form #new-testimonial-textarea textarea,
 form[id*="media-edit-inline-form"] p input#media_title,
 form[id*="media-edit-inline-form"] textarea#media_description,
 body.my-events form#event-form .wrap input,
-body.my-events form#event-form .wrap textarea {
+body.my-events form#event-form .wrap textarea,
+body.page-template-user-location-php form#location-form div input,
+body.page-template-user-location-php form#location-form div textarea {
 	background-color: #f4f1e7;
 	border: 0px !important;
 	border-radius: 0px !important;
@@ -606,7 +610,8 @@ body.my-events form#event-form .wrap textarea {
 .editfield .radio span,
 #send_message_form label,
 body.settings #item-body h3 + form label,
-form#testimonial-form h5 {
+form#testimonial-form h5,
+body.page-template-user-location-php form#location-form h4 {
 	font: 1.2em/1em "PT Sans Narrow",Arial,Helvetica,Geneva,sans-serif;
 	color: #665942;
 	text-transform: uppercase;	
@@ -717,7 +722,26 @@ body.register div#tos label input {
 	margin-top: -7px;
 }
 
+body.page-template-user-location-php form#location-form h4 {
+	font-size: 1em;
+	margin: 19px 0 6px;
+}
 
+body.page-template-user-location-php form#location-form div input {
+	
+}
+body.page-template-user-location-php form#location-form div {
+	
+}
+body.page-template-user-location-php form#location-form {
+	font: 1.15em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif;
+	color: #665942 !important;
+	text-align: left;
+}
+body.page-template-user-location-php form#location-form div input,
+body.page-template-user-location-php form#location-form div textarea {
+	font-size: 1em !important;
+}
 
 
 
@@ -2814,7 +2838,9 @@ input#gallery_title,
 #media_bulk_edit_form div.edit-media .edit-info input,
 body.my-events .search-box input#post-search-input,
 body.my-events form#event-form .wrap input,
-body.my-events form#event-form .wrap textarea {
+body.my-events form#event-form .wrap textarea,
+body.page-template-user-location-php form#location-form div input,
+body.page-template-user-location-php form#location-form div textarea {
 	font: .95em/1.2em "Times New Roman", Times, serif;
 }
 #galleries form input[type="submit"] {		/* <- general button for galleries */
