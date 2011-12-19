@@ -328,7 +328,7 @@ if (!function_exists('load_my_scripts')) {
 	    	if( defined(BP_GALLERY_PLUGIN_URL) ) wp_dequeue_script('jqueryui');
 			wp_enqueue_script('dialog-theme-script', get_bloginfo('template_url').'/js/jquery-ui.custom.min.js', array('jquery'), '1.8.162', false );
 			wp_enqueue_script('booking-event-theme-script', get_bloginfo('template_url').'/js/js.js', array('jquery'), '0.1', false );
-			wp_localize_script( 'booking-event-theme-script', 'Siteinfo', array( 'slug'=>$p->post_name,'site_url' => get_bloginfo('template_url') ) );
+			wp_localize_script( 'booking-event-theme-script', 'Siteinfo', array( 'slug'=>$p->post_name,'site_url' => get_bloginfo('template_url'), 'user' => user_domain() ) );
     	}
     }
 	add_action('wp_print_scripts', 'load_my_scripts');
@@ -412,5 +412,22 @@ function my_em_styles_placeholders($replace, $EM_Event, $result){
 	
 	return $replace;
 }
+function submitLocationRedirect($location, $status)
+{
+	global $wp_query;
+	if( isset($_GET['user']) )
+	{
+		$location = user_domain();
+	}
+	return $location;
+}
+add_filter('wp_redirect', 'submitLocationRedirect', 100, 2);
 
+function addQueryArgToLoginRedirect($link, $u)
+{
+	
+	$link = add_query_arg('user', 'location', $link);
+	return $link;
+}
+add_filter('bpdev_autoactivate_redirect_url', 'addQueryArgToLoginRedirect', 10, 2);
 ?>

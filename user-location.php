@@ -2,14 +2,8 @@
 <?php /*
 Template Name: Location
 */
-if(isset($_POST['submit']))
-{
-	header ("location: http://localhost/comedanonna/utenti-users/piermaria/events/my-events/edit/"); 
-}
 ?>
 <?php get_header(); ?> 
-
-
             <div id="main-inner">
   
               <?php
