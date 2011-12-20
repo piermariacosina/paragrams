@@ -726,12 +726,9 @@ body.page-template-user-location-php form#location-form h4 {
 	font-size: 1em;
 	margin: 19px 0 6px;
 }
-
 body.page-template-user-location-php form#location-form div input {
-	
 }
 body.page-template-user-location-php form#location-form div {
-	
 }
 body.page-template-user-location-php form#location-form {
 	font: 1.15em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif;
@@ -742,7 +739,40 @@ body.page-template-user-location-php form#location-form div input,
 body.page-template-user-location-php form#location-form div textarea {
 	font-size: 1em !important;
 }
+body.page-template-user-location-php form#location-form div input#location-name {
+	margin-bottom: 6px;
+	width: 396px;
+}
+body.page-template-user-location-php form#location-form div div#em-location-data {
+	margin-top: 7px;
+}
+body.page-template-user-location-php form#location-form div div#em-location-data th {
+	padding: 0;
+}
+body.page-template-user-location-php form#location-form div div#em-location-data th:first-child {
+	font-weight: normal;
+	padding-bottom: 4px;
+	padding-top: 0px;
+}
+body.page-template-user-location-php form#location-form div div#em-location-data td input {
+	width: 248px;
+	margin-right: 4px;
+}
+body.page-template-user-location-php form#location-form div div#em-location-data td select {
+	width: 130px;
+	margin-right: 4px;
+}
+body.page-template-user-location-php form#location-form div div#em-location-data table + div {
+	width: 405px !important;
+	height: 250px !important;
+	border-radius: 2px;
+	font: .8em/1.3em "Lucida Grande", Lucida, Verdana, sans-serif !important;
+}
 
+body.page-template-user-location-php form#location-form div div#em-location-data #em-map {
+	width: 405px !important;
+	height: 250px !important;
+}
 
 
 /*
