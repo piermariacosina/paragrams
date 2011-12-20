@@ -9,7 +9,7 @@ Template Name: Location
               <?php
               
               	global $EM_Location, $EM_Notices;
-              
+              	
               	//check that user can access this page
               	if( is_object($EM_Location) && !$EM_Location->can_manage('edit_locations','edit_others_locations') ){
               		?>
@@ -26,6 +26,9 @@ Template Name: Location
               	$required = "<i>(".__('required','dbem').")</i>";
               	echo $EM_Notices;
               	?>
+              	<?php 
+              		//$user_domain=$bp->loggedin_user->domain;
+              		?>
               	<form enctype='multipart/form-data' name='editcat' id='location-form' method='post' action='' class='validate'>
               		<input type='hidden' name='action' value='location_save' />
               		<input type='hidden' name='_wpnonce' value='<?php echo wp_create_nonce('location_save'); ?>' />
@@ -125,13 +128,6 @@ Template Name: Location
               		<?php do_action('em_front_location_form_footer'); ?>
               		<p class='submit'><input type='submit' class='button-primary' name='submit' value='<?php _e('Update location', 'dbem') ?>' /></p>
               	</form>
-              	<?php 
-              
-              	global $bp;
-              	$user_domain=$bp->loggedin_user->domain;
-              	?>
-              	<a href="<?php echo $user_domain ?>">Quando hai finito vai al tuo profilo utente</a>
-            
             </div>
         	
  
