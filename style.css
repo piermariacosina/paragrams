@@ -590,7 +590,8 @@ body.page-template-user-location-php form#location-form div textarea {
 .datebox select[id*="year"] {
 	width: 110px !important;
 }
-.register-section h4 {
+.register-section h4,
+body.page-template-user-location-php form#location-form h3 {
 	font: italic 2em/1.2em "PT Sans Narrow", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 0.025em;
 	margin-bottom: 15px;
@@ -726,9 +727,9 @@ body.page-template-user-location-php form#location-form h4 {
 	font-size: 1em;
 	margin: 19px 0 6px;
 }
-body.page-template-user-location-php form#location-form div input {
-}
 body.page-template-user-location-php form#location-form div {
+	display: inline-block;
+	padding: 0 !important;
 }
 body.page-template-user-location-php form#location-form {
 	font: 1.15em/1.1em "Neuton",Georgia,"Times New Roman",Times,serif;
@@ -740,11 +741,11 @@ body.page-template-user-location-php form#location-form div textarea {
 	font-size: 1em !important;
 }
 body.page-template-user-location-php form#location-form div input#location-name {
-	margin-bottom: 6px;
+	margin-bottom: 5px;
 	width: 396px;
 }
 body.page-template-user-location-php form#location-form div div#em-location-data {
-	margin-top: 7px;
+	margin: 7px 0 5px;
 }
 body.page-template-user-location-php form#location-form div div#em-location-data th {
 	padding: 0;
@@ -773,14 +774,22 @@ body.page-template-user-location-php form#location-form div div#em-location-data
 	width: 405px !important;
 	height: 250px !important;
 }
-
+body.page-template-user-location-php form#location-form div textarea[name="content"] {
+	width: 393px;
+	margin-bottom: 5px;
+	height: 112px;
+}
+body.page-template-user-location-php form#location-form div input#location-image {
+	width: 264px;
+	margin: 0 4px;
+}
+body.page-template-user-location-php form#location-form p.submit {
+	margin: 35px 0 0 !important;
+}
 
 /*
 ** Exceptions for inside pages <--
 */
-
-
-
 
 
 
@@ -1025,6 +1034,7 @@ body.page-template-default .article ul li {
 	position: relative;
 	top: -5px;
 }
+
 #header #sidebar li.widget_autoconnect_premium {
 	float: right;
 	width: 300px;
@@ -1041,6 +1051,8 @@ body.page-template-default .article ul li {
 	height: 40px !important;	
 }
 /* use proper selectors --> */
+
+
 #header #sidebar li.widget_autoconnect_premium div[style="text-align:center"] {
 	text-transform: uppercase;
 	font: bold 1.13em/1.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
@@ -1893,7 +1905,8 @@ body.xprofile form#profile-edit-form div.submit,
 body.settings form div.submit,
 body.compose form #send_message_form div.submit,
 body.my-events form#event-form p.submit,
-.standard-form#signup_form div.submit {
+.standard-form#signup_form div.submit,
+body.page-template-user-location-php form#location-form p.submit {
 	background: none !important;
 	border: 0 !important;
 	cursor: default;
@@ -2720,8 +2733,12 @@ body.gallery div#message p  {
 }
 .fb_button,
 .fb_button_rtl {
-	padding: 0 !important;
+	padding-left: 24px !important;
 }
+.fb_button span.fb_button_text {
+	font-size: 11px !important;
+}
+
 
 /*
 ** gmap on profile
@@ -3177,7 +3194,6 @@ form[id*="media-edit-inline-form"] .media-inline-actions .save {
 form[id*="media-edit-inline-form"] .media-inline-actions .cancel {
 	background: #665842;	
 }
-
 
 
 /* SPECIAL STYLES **************************************************/
