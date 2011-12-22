@@ -445,11 +445,11 @@ body.single-event .article #right-column .booking .date,
 body.single-event .article #right-column .booking .time {
 	display: inline-block;
 	font-size: 1.4em;
-	padding: 0 35px;
 	margin: 0;
 }
 body.single-event .article #right-column .booking .time {
 	float: right;
+	padding-right: 35px;
 }
 body.single-event .article #right-column .booking .location {
 	text-align: center;
@@ -483,7 +483,7 @@ body.single-event .article #right-column #people .avatar img {
 }
 .em-booking-form-details p textarea {
 	padding: 5px;
-	width: 255px;
+	width: 250px;
 	border: 1px solid #84765E;
 	height: 70px;
 }
@@ -1192,12 +1192,20 @@ body.page-template-default .article ul li {
 	border-bottom: 1px solid #665942;
 	padding: 2px 0;
 }
-#header #sidebar li.widget_autoconnect_premium #forgotText a {
+#header #sidebar li.widget_autoconnect_premium a,
+div.em-booking-login form.em-booking-login-form a {
 	font-style: italic;
 	font-size: 1.1em;
 	text-transform: lowercase;
 	text-decoration: none;
 	color: #665942;
+}
+a[href*="wp-login.php?action=register"] {
+	position: absolute;
+	right: 11px;
+	top: 52px;
+	border-bottom: 1px solid #665942;
+	padding: 2px 0;
 }
 #sidebar {
 	width: 645px;
@@ -1638,6 +1646,7 @@ blockquote.right {
 
 
 /* Site Generator Line */
+
 #site-generator {
 	background: #f9f9f9;
 	border-top: 1px solid #ddd;
@@ -1664,6 +1673,97 @@ blockquote.right {
 
 
 /* OVERWRITE STYLES ************************************************/
+
+
+/*
+** login widget
+*/
+
+div#em-booking {
+	overflow: auto; /* avoid y scroll on chrome */
+}
+div#em-booking .em-booking-form-details p label[for="user_name"] + input {
+	width: 250px !important;
+	margin-right: 0 !important;
+}
+div#em-booking .em-booking-form-details p label[for="donate"] + input {
+	width: 54px !important;
+	margin-right: 150px;
+}
+div#em-booking .em-booking-form-details .em-booking-buttons img.em-booking-submit {
+	background: none !important;
+	border: none !important;
+	padding: 0 !important;
+}
+
+div.em-booking-login {
+	margin: 30px 0 0 !important;
+	border-left: none !important;
+	clear: both;
+	border-top: 1px dotted #655740;
+	padding: 25px 0 0 !important;
+	margin-top: 40px;
+}
+div.em-booking-login form.em-booking-login-form p:first-child {
+	font-style: italic;
+	margin-bottom: 20px !important;
+}
+div.em-booking-login .fbLoginButton {
+	position: relative !important;
+	top: 0 !important;
+	left: 0 !important;
+}
+div#facebook-btn-wrap a {
+	padding-bottom: 0;
+	border: 0;
+	font-style: normal;
+	text-transform: inherit;
+}
+div.em-booking-login form.em-booking-login-form p:nth-child(2) {
+	margin-bottom: 0 !important;
+}
+div.em-booking-login form.em-booking-login-form p:nth-child(3) {
+	margin-top: 5px !important;
+}
+div.em-booking-login form.em-booking-login-form p input {
+	border: 1px solid #fff !important;
+	border: none;
+	background: white;
+	padding: 0 5px 0;
+	height: 22px;
+}
+div.em-booking-login form.em-booking-login-form input#em_wp-submit {
+	border: none;
+	background: #827560;
+	font: .9em/.5em 'PT Sans Narrow', Arial, Helvetica, Geneva, sans-serif;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	left: 210px;
+	height: 24px;
+	padding: 8px 10px 8px 12px;
+	margin: 10px 10px 0 0;
+}
+div.em-booking-login form.em-booking-login-form input#em_rememberme {
+	position: relative;
+	top: 1px;
+	margin-right: 2px;
+}
+
+
+
+div.em-booking-login label {
+	color: #665942;
+	font-size: 1.1em;
+	text-transform: lowercase;
+	font-family: "Neuton", Georgia, "Times New Roman", Times, serif;
+}
+div.em-booking-login form.em-booking-login-form a {
+	border-bottom: 1px solid #665942;
+	padding-bottom: 2px;
+	font-family: "Neuton", Georgia, "Times New Roman", Times, serif;
+}
+
 
 /*
 ** calendar
@@ -1707,6 +1807,9 @@ table.em-calendar tr.days-names td {
 	padding: 0 !important;
 	width: auto !important;
 	float: none !important;
+}
+.em-booking-form-details p.ticket-desc {
+	font-style: italic;
 }
 .em-booking-buttons {
 	width: 100% !important;
@@ -2730,6 +2833,8 @@ body.gallery div#message p  {
 .fb_button_large,
 .fb_button_large_rtl {
 	background-position: -1px -139px !important;
+	text-transform: none !important;
+	font-style: inherit !important;
 }
 .fb_button,
 .fb_button_rtl {
