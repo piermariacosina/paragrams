@@ -2621,10 +2621,28 @@ div.item-list-tabs#subnav ul li.current a {
  	padding: 5px 0 5px 40px;
 }
 #subnav ul li a {
-	padding: 5px 0 5px 27px;
+	padding: 5px 0 5px 10px;
+}
+#subnav ul li a span {
+	position: relative;
+	left: 2px;
+	top: -1px;
 }
 #object-nav ul li a {
 	max-width: 150px;
+}
+div.item-list-tabs ul li a span {
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+	font-size: 87% !important;
+	font-weight: 400 !important;
+	font-style: normal !important;
+	padding: 1px 5px 1px 6px !important;
+	background: #7BB9BA !important;
+}
+div.item-list-tabs ul li.selected a span, div.item-list-tabs ul li.current a span {
+	background: #665942 !important;
 }
 div.item-list-tabs#subnav {
 	float: left;
