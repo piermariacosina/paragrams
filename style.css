@@ -309,6 +309,39 @@ body.page-parent #main-inner .article {
 	width: auto !important;
 	padding: 0 !important;
 	margin: 0 !important;
+	overflow: visible;
+}
+body.page-parent #main-inner div.em-events-search {
+	position: relative;
+/*	left: -20px; */
+	padding: 10px;
+	width: 940px;
+	margin-bottom: 5px;
+	font: italic 1.3em/1.2em "Neuton", Georgia, "Times New Roman", Times, serif;
+	font-weight: 400;
+	color: #665942;
+	height: 80px;
+	margin-bottom: -60px;
+	position: relative;
+	z-index: 1;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background: #e9e1c6 url('images/header_background.png') no-repeat center top fixed;
+}
+body.page-parent #main-inner div.em-events-search input#em-date-start-loc,
+body.page-parent #main-inner div.em-events-search input#em-date-end-loc {
+	margin: 0 4px;
+	background: #fff !important;
+}
+div.em-events-search input.em-events-search-submit {
+	border: 1px #FF6B71 solid;
+	width: auto;
+	background: #FB9A91;
+	padding: 7px 10PX 8PX;
+	font: .85em/.75em "Neuton", Georgia, "Times New Roman", Times, serif;
+	color: white;
+	text-transform: uppercase;
+	margin-left: 110px;
 }
 body.page-parent #main-inner .li_container {
 	margin: 0 auto;
@@ -324,6 +357,8 @@ body.page-parent #main-inner .li_container ul.mcol li {
 	background: #fff;
 	width: 306px;
 	border-radius: 3px;
+	position: relative;
+	z-index: 2;
 }
 body.page-parent #main-inner .li_container ul.mcol li a {
 	text-decoration: none;
@@ -573,7 +608,9 @@ form[id*="media-edit-inline-form"] textarea#media_description,
 body.my-events form#event-form .wrap input,
 body.my-events form#event-form .wrap textarea,
 body.page-template-user-location-php form#location-form div input,
-body.page-template-user-location-php form#location-form div textarea {
+body.page-template-user-location-php form#location-form div textarea,
+body.page-parent #main-inner div.em-events-search input#em-date-start-loc,
+body.page-parent #main-inner div.em-events-search input#em-date-end-loc {
 	background-color: #f4f1e7;
 	border: 0px !important;
 	border-radius: 0px !important;
@@ -952,7 +989,6 @@ body.page-template-default #main-inner .article {
 	background: #fff;
 	position: relative;
 	margin: 30px 0 30px -20px;
-	width: 890px !important;
 	padding: 30px 20px 20px 50px;
 	font-family: "Neuton", Georgia, "Times New Roman", Times, serif;
 }
